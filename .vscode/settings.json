@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ETERNAL_ROOM_MOBILE.sln"
+    "dotnet.defaultSolution": "2DMOBILEGAME.sln"
 }

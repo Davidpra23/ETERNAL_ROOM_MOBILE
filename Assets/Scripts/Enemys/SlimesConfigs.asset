@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: SlimesConfigs
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyConfiguration
+  enemyConfigurations:
+  - enemyPrefab: {fileID: 1264051147086912737, guid: f85a5184afed73242a56fd8a7c637531, type: 3}
+    startRound: 1
+    endRound: 5
+    enemiesPerSpawn: 5
+    spawnInterval: 2
+    enemiesPerRoundIncrease: 3
+    intervalReductionPerRound: 0.4
+    minInterval: 1
