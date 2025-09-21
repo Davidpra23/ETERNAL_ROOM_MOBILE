@@ -5,6 +5,8 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DefaultSlashAngles
 {
+
+
     [Header("Right Direction")]
     public float rightWindUpAngle = 30f;
     public float rightSlashAngle = -90f;
@@ -27,6 +29,9 @@ public class DefaultSlashAngles
 /// </summary>
 public class SwordAimAndSlash : MonoBehaviour
 {
+    // Nuevas variables para control de cambio de objetivo
+    [SerializeField] private float targetLockDuration = 1f; // Duración mínima antes de cambiar de objetivo
+    private float timeSinceLastTargetChange = 0f;
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private SwordDamageSystem swordDamageSystem;
@@ -102,6 +107,8 @@ public class SwordAimAndSlash : MonoBehaviour
 
     void Update()
     {
+        timeSinceLastTargetChange += Time.deltaTime;
+
         if (playerTransform == null) return;
 
         UpdateTargetPosition();
@@ -137,7 +144,7 @@ public class SwordAimAndSlash : MonoBehaviour
             swordDamageSystem.OnAttack -= OnPlayerAttack;
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
@@ -156,7 +163,7 @@ public class SwordAimAndSlash : MonoBehaviour
             Gizmos.DrawLine(swordTip.position, currentTarget.position);
         }
     }
-    #endif
+#endif
 
     #endregion
 
@@ -182,14 +189,14 @@ public class SwordAimAndSlash : MonoBehaviour
         if (playerTransform == null)
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
-            
+
             if (playerTransform == null)
             {
                 Debug.LogWarning("Player Transform no encontrado. Buscando en objetos con nombre 'Player'...");
                 GameObject playerObj = GameObject.Find("Player");
                 if (playerObj != null) playerTransform = playerObj.transform;
             }
-            
+
             if (playerTransform != null)
                 Debug.Log("Player Transform asignado automáticamente: " + playerTransform.name);
         }
@@ -204,16 +211,16 @@ public class SwordAimAndSlash : MonoBehaviour
         {
             // Primero buscar en el mismo GameObject
             swordDamageSystem = GetComponent<SwordDamageSystem>();
-            
+
             // Si no está, buscar en hijos
             if (swordDamageSystem == null)
                 swordDamageSystem = GetComponentInChildren<SwordDamageSystem>();
-            
+
             // Si todavía no está, buscar en el player
             if (swordDamageSystem == null && playerTransform != null)
             {
                 swordDamageSystem = playerTransform.GetComponentInChildren<SwordDamageSystem>();
-                
+
                 // Último intento: buscar en toda la escena
                 if (swordDamageSystem == null)
                 {
@@ -222,7 +229,7 @@ public class SwordAimAndSlash : MonoBehaviour
                         Debug.LogWarning("SwordDamageSystem encontrado en la escena pero no en la jerarquía esperada.");
                 }
             }
-            
+
             if (swordDamageSystem != null)
                 Debug.Log("SwordDamageSystem asignado automáticamente: " + swordDamageSystem.name);
         }
@@ -238,11 +245,11 @@ public class SwordAimAndSlash : MonoBehaviour
             if (playerTransform != null)
             {
                 playerMovement = playerTransform.GetComponent<PlayerMovement>();
-                
+
                 if (playerMovement == null)
                 {
                     playerMovement = playerTransform.GetComponentInChildren<PlayerMovement>();
-                    
+
                     if (playerMovement == null)
                     {
                         playerMovement = FindObjectOfType<PlayerMovement>();
@@ -255,7 +262,7 @@ public class SwordAimAndSlash : MonoBehaviour
             {
                 playerMovement = FindObjectOfType<PlayerMovement>();
             }
-            
+
             if (playerMovement != null)
                 Debug.Log("PlayerMovement asignado automáticamente: " + playerMovement.name);
         }
@@ -273,14 +280,14 @@ public class SwordAimAndSlash : MonoBehaviour
             if (swordTip == null) swordTip = transform.Find("SwordTip");
             if (swordTip == null) swordTip = transform.Find("tip");
             if (swordTip == null) swordTip = transform.Find("sword_tip");
-            
+
             // Buscar por tag
             if (swordTip == null)
             {
                 GameObject tipObj = GameObject.FindGameObjectWithTag("SwordTip");
                 if (tipObj != null) swordTip = tipObj.transform;
             }
-            
+
             // Si no se encuentra, usar el propio transform
             if (swordTip == null)
             {
@@ -302,7 +309,7 @@ public class SwordAimAndSlash : MonoBehaviour
         if (parentTransform == null)
         {
             parentTransform = transform.parent;
-            
+
             if (parentTransform == null)
             {
                 Debug.LogWarning("No se encontró parent transform. Usando el transform actual.");
@@ -457,15 +464,20 @@ public class SwordAimAndSlash : MonoBehaviour
             return;
         }
 
-        enemiesInRange.RemoveAll(enemy => enemy == null);
+        enemiesInRange.RemoveAll(enemy => enemy == null || enemy.GetComponent<EnemyHealth>()?.IsDead == true);
+
+        // Si ya tenemos un objetivo válido y no ha pasado suficiente tiempo, mantenlo
+        if (currentTarget != null && enemiesInRange.Contains(currentTarget) && timeSinceLastTargetChange < targetLockDuration)
+        {
+            hasTarget = true;
+            return;
+        }
 
         Transform closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
         foreach (Transform enemy in enemiesInRange)
         {
-            if (enemy.GetComponent<EnemyHealth>()?.IsDead ?? true) continue;
-
             float distance = Vector3.Distance(transform.position, enemy.position);
             if (distance < closestDistance)
             {
@@ -474,9 +486,16 @@ public class SwordAimAndSlash : MonoBehaviour
             }
         }
 
+        // Si hay cambio de objetivo, reiniciamos el temporizador
+        if (closestEnemy != currentTarget)
+        {
+            timeSinceLastTargetChange = 0f;
+        }
+
         currentTarget = closestEnemy;
         hasTarget = currentTarget != null;
     }
+
 
     #endregion
 
@@ -604,7 +623,7 @@ public class SwordAimAndSlash : MonoBehaviour
 
         if (movementDir.magnitude <= 0.1f)
         {
-            return parentTransform != null && parentTransform.localScale.x < 0 ? 
+            return parentTransform != null && parentTransform.localScale.x < 0 ?
                 CreateLeftSlashConfig() : CreateRightSlashConfig();
         }
 

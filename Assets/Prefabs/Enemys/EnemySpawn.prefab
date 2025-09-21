@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
   enemyPrefab: {fileID: 8922664139331840098, guid: 324044ce6f8687345a5c84932b3969e3, type: 3}
-  spawnPoint: {fileID: 7503944923360428418}
   enemySpawnDelay: 2
+  fadeOutDuration: 0.5
 --- !u!1 &3838624439609588422
 GameObject:
   m_ObjectHideFlags: 0
