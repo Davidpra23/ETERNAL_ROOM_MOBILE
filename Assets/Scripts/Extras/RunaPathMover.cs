@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class RunaPathMover : MonoBehaviour
 {
+    [Header("Objeto a activar al aumentar intensidad")]
+    [SerializeField] private GameObject objectToActivateOnLightPulse;
+
     [Header("Activación automática")]
     [SerializeField] private float activationDelay = 1f;
 
@@ -157,6 +160,7 @@ public class RunaPathMover : MonoBehaviour
         float halfDuration = lightEffectDuration / 2f;
         float t = 0f;
 
+        // Primera mitad: Aumentar intensidad
         while (t < halfDuration)
         {
             t += Time.deltaTime;
@@ -165,6 +169,11 @@ public class RunaPathMover : MonoBehaviour
             yield return null;
         }
 
+        // ACTIVAR OBJETO AQUÍ (cuando la luz está al máximo)
+        if (objectToActivateOnLightPulse != null)
+            objectToActivateOnLightPulse.SetActive(true);
+
+        // Segunda mitad: Disminuir intensidad
         t = 0f;
         while (t < halfDuration)
         {
@@ -176,6 +185,7 @@ public class RunaPathMover : MonoBehaviour
 
         arrivalLight.intensity = originalIntensity;
     }
+
 
     private IEnumerator GlowPulseLoop()
     {
