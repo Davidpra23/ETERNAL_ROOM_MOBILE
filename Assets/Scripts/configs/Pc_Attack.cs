@@ -1,3 +1,4 @@
+// Pc_Attack.cs (Modificado)
 using UnityEngine;
 
 public class Pc_Attack : MonoBehaviour
@@ -7,30 +8,10 @@ public class Pc_Attack : MonoBehaviour
     [SerializeField] private bool useMouseClick = true;
     [SerializeField] private int mouseButton = 0;
     
-    [Header("Referencia al Sistema de Espada")]
-    [SerializeField] private SwordDamageSystem swordDamageSystem;
-    
     [Header("Opciones")]
     [SerializeField] private bool showDebug = true;
 
-    void Awake()
-    {
-        // Buscar automáticamente el SwordDamageSystem si no está asignado
-        if (swordDamageSystem == null)
-        {
-            swordDamageSystem = FindObjectOfType<SwordDamageSystem>();
-            
-            // Si todavía no se encuentra, buscar en hijos del player
-            if (swordDamageSystem == null)
-            {
-                var player = GameObject.FindGameObjectWithTag("Player");
-                if (player != null)
-                {
-                    swordDamageSystem = player.GetComponentInChildren<SwordDamageSystem>();
-                }
-            }
-        }
-    }
+    // No necesitamos más la referencia a SwordDamageSystem aquí.
 
     void Update()
     {
@@ -49,29 +30,19 @@ public class Pc_Attack : MonoBehaviour
 
     private void Attack()
     {
-        if (swordDamageSystem != null)
+        // En lugar de llamar directamente a la espada, le pedimos al manager que lo haga.
+        if (EquipmentManager.Instance != null)
         {
-            swordDamageSystem.TryAttack();
+            EquipmentManager.Instance.TriggerAttack();
             
             if (showDebug)
             {
-                Debug.Log("Ataque ejecutado desde PC input");
+                Debug.Log("Señal de ataque enviada al EquipmentManager.");
             }
         }
         else if (showDebug)
         {
-            Debug.LogWarning("SwordDamageSystem no encontrado");
+            Debug.LogWarning("EquipmentManager no encontrado en la escena.");
         }
-    }
-    
-    // Métodos públicos para cambiar el sistema de espada en tiempo de ejecución
-    public void SetSwordDamageSystem(SwordDamageSystem newSystem)
-    {
-        swordDamageSystem = newSystem;
-    }
-    
-    public SwordDamageSystem GetSwordDamageSystem()
-    {
-        return swordDamageSystem;
     }
 }

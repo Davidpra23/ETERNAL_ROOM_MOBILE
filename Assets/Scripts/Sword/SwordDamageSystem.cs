@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEditor;
 #endif
 
-public class SwordDamageSystem : MonoBehaviour
+public class SwordDamageSystem : WeaponSystem
 {
     [Header("Damage Settings")]
     [SerializeField] private int attackDamage = 10;
@@ -57,11 +57,17 @@ public class SwordDamageSystem : MonoBehaviour
             UpdateAttackDirection();
         }
     }
-
+    void OnEnable()
+    {
+        if (EquipmentManager.Instance != null)
+        {
+            EquipmentManager.Instance.EquipWeapon(this);
+        }
+    }
     /// <summary>
     /// Intenta realizar un ataque si está disponible
     /// </summary>
-    public void TryAttack()
+    public override void TryAttack()
     {
         if (!isAttackEnabled || !IsAttackReady()) return;
         
@@ -73,11 +79,11 @@ public class SwordDamageSystem : MonoBehaviour
         lastAttackTime = Time.time;
         OnAttack?.Invoke(); // Disparar evento de inicio de ataque
         ExecuteAttackEffects();
-        
+
         // Iniciar corrutina para aplicar daño con delay
         if (damageCoroutine != null)
             StopCoroutine(damageCoroutine);
-        
+
         damageCoroutine = StartCoroutine(ApplyDamageWithDelay());
     }
 
@@ -221,7 +227,7 @@ public class SwordDamageSystem : MonoBehaviour
     public Vector2 GetAttackDirection() => currentAttackDirection;
     public bool HasTarget() => currentTarget != null;
     public Vector2 GetAttackDirectionNoEnemies() => GetFallbackAttackDirection();
-    
+
     // Cancelar el daño pendiente si es necesario
     public void CancelPendingDamage()
     {
