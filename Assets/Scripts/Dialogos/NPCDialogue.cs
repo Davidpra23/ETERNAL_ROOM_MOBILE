@@ -25,6 +25,7 @@ public class NPCDialogue : MonoBehaviour
     [Header("Control Externo")]
     [SerializeField] private Canvas hudCanvas;
     [SerializeField] private MonoBehaviour scriptToEnable;
+    [SerializeField] private GameObject objectToActivate; // Nuevo: Objeto a activar al final
 
     // Estados
     private PlayerMovement playerMovement;
@@ -88,6 +89,12 @@ public class NPCDialogue : MonoBehaviour
         // Configuración inicial mínima
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         if (itemObtainedPanel != null) itemObtainedPanel.SetActive(false);
+        
+        // Desactivar el objeto al inicio si está asignado
+        if (objectToActivate != null && objectToActivate.activeInHierarchy)
+        {
+            objectToActivate.SetActive(false);
+        }
         
         if (cachedDialogueCanvasGroup != null)
         {
@@ -309,7 +316,19 @@ public class NPCDialogue : MonoBehaviour
         if (!hasDialogueCompleted)
         {
             hasDialogueCompleted = true;
-            if (scriptToEnable != null) scriptToEnable.enabled = true;
+            
+            // Activar script externo si está asignado
+            if (scriptToEnable != null) 
+            {
+                scriptToEnable.enabled = true;
+            }
+            
+            // Activar objeto asignable si está asignado
+            if (objectToActivate != null)
+            {
+                objectToActivate.SetActive(true);
+                Debug.Log($"Objeto activado: {objectToActivate.name}");
+            }
         }
         EndDialogue();
     }
@@ -402,5 +421,29 @@ public class NPCDialogue : MonoBehaviour
         inSpecialSequence = false;
         
         if (isPlayerInRange) ShowInteractionPrompt();
+    }
+
+    // Método público para activar el objeto manualmente si es necesario
+    public void ActivateAssignedObject()
+    {
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);
+        }
+    }
+
+    // Método público para desactivar el objeto manualmente si es necesario
+    public void DeactivateAssignedObject()
+    {
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(false);
+        }
+    }
+
+    // Método para cambiar el objeto a activar en tiempo de ejecución
+    public void SetObjectToActivate(GameObject newObject)
+    {
+        objectToActivate = newObject;
     }
 }

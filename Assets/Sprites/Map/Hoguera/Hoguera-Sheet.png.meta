@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -106,6 +106,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hoguera-Sheet_0: 2788851738584562663
+      Hoguera-Sheet_1: 4158825085079949659
+      Hoguera-Sheet_2: 105293362963362752
+      Hoguera-Sheet_3: -1801378104282036792
+      Hoguera-Sheet_4: -4004318934190018215
+      Hoguera-Sheet_5: -2800984302751398797
+      Hoguera-Sheet_6: -6331232485745819711
+      Hoguera-Sheet_7: -7760856036323654476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,6 +10,13 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float deathEffectDelay = 0f;
     [SerializeField] private bool flashOnDamage = true;
 
+    [Header("Coin Drop Settings")]
+    [SerializeField] private GameObject coinPrefab; // Prefab de la moneda a soltar
+    [SerializeField] private int minCoinsToDrop = 1;
+    [SerializeField] private int maxCoinsToDrop = 3;
+    [SerializeField] private float coinDropForce = 2f;
+    [SerializeField] private float coinSpreadRange = 1f;
+
     [Header("Component References")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
@@ -92,12 +99,11 @@ public class EnemyHealth : MonoBehaviour
         {
             enemyRigidbody.linearVelocity = Vector2.zero;
             enemyRigidbody.isKinematic = true;
-
-            // ✅ Congelar movimiento y rotación al morir
-            enemyRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX |
-                                         RigidbodyConstraints2D.FreezePositionY |
-                                         RigidbodyConstraints2D.FreezeRotation;
+            enemyRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
+
+        // ✅ Soltar monedas al morir
+        DropCoins();
 
         // ✅ Efecto de muerte con delay
         if (deathEffect != null)
@@ -110,7 +116,48 @@ public class EnemyHealth : MonoBehaviour
         transform.position = deathPosition;
     }
 
+    private void DropCoins()
+    {
+        if (coinPrefab == null)
+        {
+            Debug.LogWarning("Coin prefab no asignado en " + gameObject.name);
+            return;
+        }
 
+        int coinsToDrop = Random.Range(minCoinsToDrop, maxCoinsToDrop + 1);
+
+        for (int i = 0; i < coinsToDrop; i++)
+        {
+            // Calcular posición aleatoria alrededor del enemigo
+            Vector3 dropPosition = deathPosition + new Vector3(
+                Random.Range(-coinSpreadRange, coinSpreadRange),
+                Random.Range(-coinSpreadRange, coinSpreadRange),
+                0f
+            );
+
+            // Instanciar la moneda
+            GameObject coin = Instantiate(coinPrefab, dropPosition, Quaternion.identity);
+
+            // Aplicar fuerza física para efecto de salpicadura
+            Rigidbody2D coinRb = coin.GetComponent<Rigidbody2D>();
+            if (coinRb != null)
+            {
+                Vector2 forceDirection = new Vector2(
+                    Random.Range(-1f, 1f),
+                    Random.Range(0.5f, 1f)
+                ).normalized;
+
+                coinRb.AddForce(forceDirection * coinDropForce, ForceMode2D.Impulse);
+                
+                // Rotación aleatoria
+                coinRb.AddTorque(Random.Range(-5f, 5f), ForceMode2D.Impulse);
+            }
+
+            Debug.Log($"Moneda {i + 1} soltada en posición: {dropPosition}");
+        }
+
+        Debug.Log($"{coinsToDrop} moneda(s) soltada(s) por {gameObject.name}");
+    }
 
     private IEnumerator SpawnDeathEffectWithDelay()
     {
@@ -122,7 +169,7 @@ public class EnemyHealth : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
 
-    private System.Collections.IEnumerator DamageFlash()
+    private IEnumerator DamageFlash()
     {
         if (spriteRenderer != null)
         {
@@ -130,6 +177,28 @@ public class EnemyHealth : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             spriteRenderer.color = originalColor;
         }
+    }
+
+    // Métodos públicos para configurar las monedas en tiempo de ejecución
+    public void SetCoinPrefab(GameObject newCoinPrefab)
+    {
+        coinPrefab = newCoinPrefab;
+    }
+
+    public void SetCoinDropRange(int minCoins, int maxCoins)
+    {
+        minCoinsToDrop = Mathf.Max(0, minCoins);
+        maxCoinsToDrop = Mathf.Max(minCoinsToDrop, maxCoins);
+    }
+
+    public void SetCoinDropForce(float force)
+    {
+        coinDropForce = Mathf.Max(0f, force);
+    }
+
+    public void SetCoinSpreadRange(float spread)
+    {
+        coinSpreadRange = Mathf.Max(0f, spread);
     }
 
     public void SetDeathEffectDelay(float delay)

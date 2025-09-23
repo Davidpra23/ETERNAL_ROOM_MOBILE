@@ -105,7 +105,7 @@ public class WaveManager : MonoBehaviour
             startWaveButton.GetComponentInChildren<TextMeshProUGUI>().text = "Iniciar Oleada 1";
         }
         
-        timerText.text = "Presiona el botón para comenzar";
+        timerText.text = "Presiona el boton para comenzar";
     }
 
     private void Update()
