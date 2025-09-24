@@ -178,6 +178,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -722,7 +735,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '!$floatingrocks_2_0': 8936709153620733126
+      '!$floatingrocks_2_1': 5013885774945561056
+      '!$floatingrocks_2_10': 3472570740038302180
+      '!$floatingrocks_2_11': -6241030347553253576
+      '!$floatingrocks_2_12': 2215443885117523382
+      '!$floatingrocks_2_13': -1840113274525859780
+      '!$floatingrocks_2_14': -6479883432552416254
+      '!$floatingrocks_2_15': 5653259383604028067
+      '!$floatingrocks_2_16': -7278190296423889629
+      '!$floatingrocks_2_17': 4656303477068070398
+      '!$floatingrocks_2_18': -8866945250477670871
+      '!$floatingrocks_2_19': -4970977914193873172
+      '!$floatingrocks_2_2': -4952472671741891003
+      '!$floatingrocks_2_20': 6663460506584605236
+      '!$floatingrocks_2_21': -9054510882193117587
+      '!$floatingrocks_2_22': -2998442711786019069
+      '!$floatingrocks_2_23': -913446147765412842
+      '!$floatingrocks_2_3': 8174490704274377752
+      '!$floatingrocks_2_4': 2890492957459880354
+      '!$floatingrocks_2_5': -5101599994232299266
+      '!$floatingrocks_2_6': 6374773143390564303
+      '!$floatingrocks_2_7': 5559158943656547519
+      '!$floatingrocks_2_8': -6411751339068006482
+      '!$floatingrocks_2_9': 3525406686349979737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

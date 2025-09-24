@@ -211,6 +211,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -997,7 +1010,42 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tf_dd_B_1_0: 5882959632784695200
+      tf_dd_B_1_1: 637023836020921704
+      tf_dd_B_1_10: -5664223136223184067
+      tf_dd_B_1_11: -6630766925698109775
+      tf_dd_B_1_12: -6002595360761926387
+      tf_dd_B_1_13: -325836787290957746
+      tf_dd_B_1_14: 6273158225094942678
+      tf_dd_B_1_15: 2883997906254037691
+      tf_dd_B_1_16: 9099558034438178477
+      tf_dd_B_1_17: 1371037012707144752
+      tf_dd_B_1_18: -1195176606734303701
+      tf_dd_B_1_19: 2040636142890122393
+      tf_dd_B_1_2: -4073191931562716848
+      tf_dd_B_1_20: 3957379451562886340
+      tf_dd_B_1_21: -8290927414388881595
+      tf_dd_B_1_22: 3851550932641395325
+      tf_dd_B_1_23: 1738734830665093338
+      tf_dd_B_1_24: 6756243512452585450
+      tf_dd_B_1_25: 277887918545779853
+      tf_dd_B_1_26: -1881227477497715368
+      tf_dd_B_1_27: 9208432489530445071
+      tf_dd_B_1_28: -1943019099932686639
+      tf_dd_B_1_29: 7118382157005437342
+      tf_dd_B_1_3: -8420212935305359571
+      tf_dd_B_1_30: -1382147233818124133
+      tf_dd_B_1_31: 3998464350277778454
+      tf_dd_B_1_32: -4270259668984463775
+      tf_dd_B_1_33: -3361386849141713379
+      tf_dd_B_1_34: -4268533851987014113
+      tf_dd_B_1_4: 5428265822037103997
+      tf_dd_B_1_5: 6058199407375241149
+      tf_dd_B_1_6: 418312339741254018
+      tf_dd_B_1_7: -8284921531865456622
+      tf_dd_B_1_8: -6968221071405271532
+      tf_dd_B_1_9: -5996848513499977844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

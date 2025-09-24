@@ -160,6 +160,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -572,7 +585,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      floatingrocks_1_0: -2688106968579694992
+      floatingrocks_1_1: -8184877969007875853
+      floatingrocks_1_10: -1979827335577074578
+      floatingrocks_1_11: -3985810379828012705
+      floatingrocks_1_12: 4403724025858017757
+      floatingrocks_1_13: -8874095411903216767
+      floatingrocks_1_14: -3932433027368374444
+      floatingrocks_1_15: -7424026252338160897
+      floatingrocks_1_16: -8109408715577615194
+      floatingrocks_1_17: -6835017934167925319
+      floatingrocks_1_2: 7540190831215541560
+      floatingrocks_1_3: 4529614733630399597
+      floatingrocks_1_4: 1324358781494151996
+      floatingrocks_1_5: -7562871898745508408
+      floatingrocks_1_6: 3503022906962801487
+      floatingrocks_1_7: -7514881650418067240
+      floatingrocks_1_8: -7786800650617776755
+      floatingrocks_1_9: -9122508106963578214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
