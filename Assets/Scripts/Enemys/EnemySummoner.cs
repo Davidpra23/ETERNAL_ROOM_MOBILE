@@ -11,7 +11,7 @@ public class EnemySummoner : MonoBehaviour
 
     [Header("Opciones de Invocación")]
     public float enemySpawnDelay = 1f;   // Tiempo antes de invocar al enemigo
-    public float fadeOutDuration = 0.5f; // Duración del fade-out antes de destruir
+    public float fadeOutDuration = 0.5f; // (no usado en esta versión)
 
     private GameObject currentParticleInstance;
     private ParticleSystem[] particleSystems;
@@ -26,69 +26,64 @@ public class EnemySummoner : MonoBehaviour
     {
         if (particlePrefab != null)
         {
-            currentParticleInstance = Instantiate(particlePrefab, transform.position, particlePrefab.transform.rotation);
-            particleSystems = currentParticleInstance.GetComponentsInChildren<ParticleSystem>();
+            currentParticleInstance = Instantiate(
+                particlePrefab,
+                transform.position,
+                particlePrefab.transform.rotation
+            );
+            particleSystems = currentParticleInstance.GetComponentsInChildren<ParticleSystem>(true);
         }
     }
 
     private void SummonEnemy()
     {
-        Vector3 spawnPosition = currentParticleInstance != null ? currentParticleInstance.transform.position : transform.position;
+        Vector3 spawnPosition = currentParticleInstance != null
+            ? currentParticleInstance.transform.position
+            : transform.position;
 
         if (enemyPrefab != null)
             Instantiate(enemyPrefab, spawnPosition, enemyPrefab.transform.rotation);
 
-        if (particleSystems != null)
+        if (particleSystems != null && particleSystems.Length > 0)
         {
-            // Detener emisión y fade-out de todos los sistemas de partículas
+            // Detener emisión de todos los PS
             foreach (var ps in particleSystems)
             {
+                if (ps == null) continue;
+                // StopEmitting: deja que las partículas vivas terminen su vida
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
-            StartCoroutine(FadeOutAndDestroy());
+
+            StartCoroutine(WaitParticlesThenDestroy());
         }
         else
         {
+            // No hay PS: destruye inmediatamente
             Destroy(gameObject);
         }
     }
 
-    private IEnumerator FadeOutAndDestroy()
+    private IEnumerator WaitParticlesThenDestroy()
     {
-        float t = 0f;
-
-        // Guardamos los gradientes originales para no perderlos
-        Gradient[] originalGradients = new Gradient[particleSystems.Length];
-        for (int i = 0; i < particleSystems.Length; i++)
+        // Espera a que todas las partículas mueran
+        bool anyAlive = true;
+        while (anyAlive)
         {
-            var col = particleSystems[i].colorOverLifetime;
-            col.enabled = true;
-            originalGradients[i] = col.color.gradient;
-        }
-
-        while (t < fadeOutDuration)
-        {
-            t += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, t / fadeOutDuration);
-
-            for (int i = 0; i < particleSystems.Length; i++)
+            anyAlive = false;
+            if (particleSystems != null)
             {
-                var col = particleSystems[i].colorOverLifetime;
-                Gradient grad = new Gradient();
-                grad.SetKeys(
-                    originalGradients[i].colorKeys,
-                    new GradientAlphaKey[] {
-                        new GradientAlphaKey(alpha, 0f),
-                        new GradientAlphaKey(0f, 1f)
-                    }
-                );
-                col.color = grad;
+                foreach (var ps in particleSystems)
+                {
+                    if (ps == null) continue;
+                    if (ps.IsAlive(true)) { anyAlive = true; break; }
+                }
             }
-
             yield return null;
         }
 
-        Destroy(currentParticleInstance);
+        if (currentParticleInstance != null)
+            Destroy(currentParticleInstance);
+
         Destroy(gameObject);
     }
 }

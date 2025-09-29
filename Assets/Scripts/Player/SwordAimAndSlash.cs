@@ -5,8 +5,6 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DefaultSlashAngles
 {
-
-
     [Header("Right Direction")]
     public float rightWindUpAngle = 30f;
     public float rightSlashAngle = -90f;
@@ -25,13 +23,16 @@ public class DefaultSlashAngles
 }
 
 /// <summary>
-/// Controla la orientación y animación de slash de la espada
+/// Controla la orientación y animación de slash de la espada.
+/// - Sin enemigos: aim 360° según movimiento del jugador (interpolando ángulos base).
+/// - Con enemigos: aim hacia el target.
+/// - El slash se adapta a cualquier ángulo mezclando tus presets (Right/Up/Left/Down).
 /// </summary>
 public class SwordAimAndSlash : MonoBehaviour
 {
-    // Nuevas variables para control de cambio de objetivo
-    [SerializeField] private float targetLockDuration = 1f; // Duración mínima antes de cambiar de objetivo
+    [SerializeField] private float targetLockDuration = 1f;
     private float timeSinceLastTargetChange = 0f;
+
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private SwordDamageSystem swordDamageSystem;
@@ -61,34 +62,30 @@ public class SwordAimAndSlash : MonoBehaviour
     [SerializeField] private AnimationCurve slashCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] private AnimationCurve returnCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
-    [Header("Default Angles")]
+    [Header("Default Angles (base sprite)")]
+    [Tooltip("Ángulo de la espada mirando a la derecha (en grados, tu sprite calibra aquí).")]
     [SerializeField] private float rightAngle = 90f;
     [SerializeField] private float leftAngle = -90f;
     [SerializeField] private float upAngle = 0f;
     [SerializeField] private float downAngle = 180f;
 
-    [Header("Default Slash Angles")]
+    [Header("Default Slash Angles (delta por dirección)")]
     [SerializeField] private DefaultSlashAngles defaultSlashAngles = new DefaultSlashAngles();
 
-    // Estados privados
+    // Estado
     private Transform currentTarget;
     private bool isSlashing = false;
     private bool hasTarget = false;
     private Vector3 targetPosition;
-    private List<Transform> enemiesInRange = new List<Transform>();
+    private readonly List<Transform> enemiesInRange = new();
     private Vector3 swordForwardDirection = Vector3.up;
 
-    // Rotaciones
     private Quaternion targetRotation;
     private Quaternion defaultRotation;
-    private float currentDefaultAngle = 90f;
 
-    #region Unity Methods
+    #region Unity
 
-    void Awake()
-    {
-        AutoAssignReferences();
-    }
+    void Awake() => AutoAssignReferences();
 
     void Start()
     {
@@ -97,9 +94,7 @@ public class SwordAimAndSlash : MonoBehaviour
         SubscribeToEvents();
 
         swordForwardDirection = (swordTip.position - transform.position).normalized;
-        UpdateDefaultRotation();
-        targetRotation = defaultRotation;
-        transform.rotation = targetRotation;
+        targetRotation = defaultRotation = transform.rotation;
 
         UpdateTargetPosition();
         transform.position = targetPosition;
@@ -108,8 +103,7 @@ public class SwordAimAndSlash : MonoBehaviour
     void Update()
     {
         timeSinceLastTargetChange += Time.deltaTime;
-
-        if (playerTransform == null) return;
+        if (!playerTransform) return;
 
         UpdateTargetPosition();
         FollowPlayerPosition();
@@ -117,25 +111,23 @@ public class SwordAimAndSlash : MonoBehaviour
         if (isSlashing) return;
 
         FindNearestEnemy();
-        UpdateAim();
+        UpdateAim360();
         ApplyRotation();
         UpdateSwordForwardDirection();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (((1 << other.gameObject.layer) & enemyLayer) != 0)
-        {
-            var enemyHealth = other.GetComponent<EnemyHealth>();
-            if (enemyHealth != null && !enemyHealth.IsDead && !enemiesInRange.Contains(other.transform))
-                enemiesInRange.Add(other.transform);
-        }
+        if (((1 << other.gameObject.layer) & enemyLayer) == 0) return;
+        var eh = other.GetComponent<EnemyHealth>();
+        if (eh != null && !eh.IsDead && !enemiesInRange.Contains(other.transform))
+            enemiesInRange.Add(other.transform);
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (((1 << other.gameObject.layer) & enemyLayer) != 0)
-            enemiesInRange.Remove(other.transform);
+        if (((1 << other.gameObject.layer) & enemyLayer) == 0) return;
+        enemiesInRange.Remove(other.transform);
     }
 
     void OnDestroy()
@@ -149,14 +141,14 @@ public class SwordAimAndSlash : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
-        
+
         if (swordTip != null)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawRay(transform.position, swordForwardDirection * 2f);
             Gizmos.DrawWireSphere(swordTip.position, 0.1f);
         }
-        
+
         if (hasTarget && currentTarget != null && swordTip != null)
         {
             Gizmos.color = Color.red;
@@ -167,294 +159,98 @@ public class SwordAimAndSlash : MonoBehaviour
 
     #endregion
 
-    #region Auto Assignment
+    #region Auto-assign & Init
 
-    /// <summary>
-    /// Asigna automáticamente todas las referencias necesarias
-    /// </summary>
     private void AutoAssignReferences()
     {
-        AssignPlayerTransform();
-        AssignSwordDamageSystem();
-        AssignPlayerMovement();
-        AssignSwordTip();
-        AssignParentTransform();
-    }
+        if (!playerTransform)
+            playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform ?? GameObject.Find("Player")?.transform;
 
-    /// <summary>
-    /// Busca y asigna el transform del jugador automáticamente
-    /// </summary>
-    private void AssignPlayerTransform()
-    {
-        if (playerTransform == null)
+        if (!swordDamageSystem)
+            swordDamageSystem = GetComponent<SwordDamageSystem>() ?? GetComponentInChildren<SwordDamageSystem>() ??
+                                (playerTransform ? playerTransform.GetComponentInChildren<SwordDamageSystem>() : null) ??
+                                FindObjectOfType<SwordDamageSystem>();
+
+        if (!playerMovement)
+            playerMovement = playerTransform ? playerTransform.GetComponentInChildren<PlayerMovement>() : FindObjectOfType<PlayerMovement>();
+
+        if (!swordTip)
         {
-            playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
-
-            if (playerTransform == null)
-            {
-                Debug.LogWarning("Player Transform no encontrado. Buscando en objetos con nombre 'Player'...");
-                GameObject playerObj = GameObject.Find("Player");
-                if (playerObj != null) playerTransform = playerObj.transform;
-            }
-
-            if (playerTransform != null)
-                Debug.Log("Player Transform asignado automáticamente: " + playerTransform.name);
+            swordTip = transform.Find("Tip") ?? transform.Find("SwordTip") ?? transform.Find("tip") ?? transform.Find("sword_tip");
+            if (!swordTip) swordTip = transform;
         }
+
+        if (!parentTransform) parentTransform = transform.parent ? transform.parent : transform;
     }
 
-    /// <summary>
-    /// Busca y asigna el sistema de daño de la espada automáticamente
-    /// </summary>
-    private void AssignSwordDamageSystem()
-    {
-        if (swordDamageSystem == null)
-        {
-            // Primero buscar en el mismo GameObject
-            swordDamageSystem = GetComponent<SwordDamageSystem>();
-
-            // Si no está, buscar en hijos
-            if (swordDamageSystem == null)
-                swordDamageSystem = GetComponentInChildren<SwordDamageSystem>();
-
-            // Si todavía no está, buscar en el player
-            if (swordDamageSystem == null && playerTransform != null)
-            {
-                swordDamageSystem = playerTransform.GetComponentInChildren<SwordDamageSystem>();
-
-                // Último intento: buscar en toda la escena
-                if (swordDamageSystem == null)
-                {
-                    swordDamageSystem = FindObjectOfType<SwordDamageSystem>();
-                    if (swordDamageSystem != null)
-                        Debug.LogWarning("SwordDamageSystem encontrado en la escena pero no en la jerarquía esperada.");
-                }
-            }
-
-            if (swordDamageSystem != null)
-                Debug.Log("SwordDamageSystem asignado automáticamente: " + swordDamageSystem.name);
-        }
-    }
-
-    /// <summary>
-    /// Busca y asigna el componente de movimiento del jugador automáticamente
-    /// </summary>
-    private void AssignPlayerMovement()
-    {
-        if (playerMovement == null)
-        {
-            if (playerTransform != null)
-            {
-                playerMovement = playerTransform.GetComponent<PlayerMovement>();
-
-                if (playerMovement == null)
-                {
-                    playerMovement = playerTransform.GetComponentInChildren<PlayerMovement>();
-
-                    if (playerMovement == null)
-                    {
-                        playerMovement = FindObjectOfType<PlayerMovement>();
-                        if (playerMovement != null)
-                            Debug.LogWarning("PlayerMovement encontrado en la escena pero no en el jugador.");
-                    }
-                }
-            }
-            else
-            {
-                playerMovement = FindObjectOfType<PlayerMovement>();
-            }
-
-            if (playerMovement != null)
-                Debug.Log("PlayerMovement asignado automáticamente: " + playerMovement.name);
-        }
-    }
-
-    /// <summary>
-    /// Busca y asigna la punta de la espada automáticamente
-    /// </summary>
-    private void AssignSwordTip()
-    {
-        if (swordTip == null)
-        {
-            // Buscar por nombres comunes
-            swordTip = transform.Find("Tip");
-            if (swordTip == null) swordTip = transform.Find("SwordTip");
-            if (swordTip == null) swordTip = transform.Find("tip");
-            if (swordTip == null) swordTip = transform.Find("sword_tip");
-
-            // Buscar por tag
-            if (swordTip == null)
-            {
-                GameObject tipObj = GameObject.FindGameObjectWithTag("SwordTip");
-                if (tipObj != null) swordTip = tipObj.transform;
-            }
-
-            // Si no se encuentra, usar el propio transform
-            if (swordTip == null)
-            {
-                swordTip = transform;
-                Debug.LogWarning("No se encontró SwordTip. Usando el transform actual.");
-            }
-            else
-            {
-                Debug.Log("SwordTip asignado automáticamente: " + swordTip.name);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Asigna el parent transform automáticamente
-    /// </summary>
-    private void AssignParentTransform()
-    {
-        if (parentTransform == null)
-        {
-            parentTransform = transform.parent;
-
-            if (parentTransform == null)
-            {
-                Debug.LogWarning("No se encontró parent transform. Usando el transform actual.");
-                parentTransform = transform;
-            }
-            else
-            {
-                Debug.Log("Parent Transform asignado automáticamente: " + parentTransform.name);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Inicializa los componentes después de asignar las referencias
-    /// </summary>
     private void InitializeComponents()
     {
-        // Verificar que todas las referencias esenciales estén asignadas
-        if (playerTransform == null)
+        if (!playerTransform || !swordDamageSystem)
         {
-            Debug.LogError("No se pudo asignar Player Transform automáticamente!");
+            Debug.LogError("[SwordAimAndSlash] Faltan referencias críticas. Deshabilitando.");
             enabled = false;
             return;
-        }
-
-        if (swordDamageSystem == null)
-        {
-            Debug.LogError("No se pudo asignar SwordDamageSystem automáticamente!");
-            enabled = false;
-            return;
-        }
-
-        if (playerMovement == null)
-        {
-            Debug.LogWarning("PlayerMovement no asignado. Algunas funcionalidades estarán limitadas.");
-        }
-
-        if (swordTip == null)
-        {
-            swordTip = transform;
-            Debug.LogWarning("SwordTip no asignado. Usando transform actual.");
-        }
-
-        if (parentTransform == null)
-        {
-            parentTransform = transform;
-            Debug.LogWarning("ParentTransform no asignado. Usando transform actual.");
         }
     }
 
     #endregion
 
-    #region Position & Rotation
+    #region Posición/Rotación
 
-    /// <summary>
-    /// Actualiza la posición objetivo basada en el jugador
-    /// </summary>
     private void UpdateTargetPosition()
     {
-        if (playerTransform == null) return;
-        targetPosition = playerTransform.position + new Vector3(positionOffset.x, positionOffset.y, 0f);
+        if (!playerTransform) return;
+        targetPosition = playerTransform.position + (Vector3)positionOffset;
     }
 
-    /// <summary>
-    /// Suavemente sigue la posición del jugador
-    /// </summary>
     private void FollowPlayerPosition()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, followSmoothness * Time.deltaTime);
     }
 
-    /// <summary>
-    /// Actualiza la dirección frontal de la espada
-    /// </summary>
     private void UpdateSwordForwardDirection()
     {
-        if (swordTip != null)
+        if (swordTip)
             swordForwardDirection = (swordTip.position - transform.position).normalized;
     }
 
     /// <summary>
-    /// Actualiza la rotación por defecto basada en el movimiento del jugador
+    /// Aiming 360°:
+    /// - Con target: mira al enemigo usando la mezcla de ángulos base.
+    /// - Sin target: mira según vector de movimiento (si no se mueve, mantiene la última).
     /// </summary>
-    private void UpdateDefaultRotation()
+    private void UpdateAim360()
     {
-        if (playerMovement == null) return;
-
-        Vector2 movementDir = playerMovement.GetMovementDirection();
-        if (movementDir.magnitude <= 0.1f) return;
-
-        float absX = Mathf.Abs(movementDir.x);
-        float absY = Mathf.Abs(movementDir.y);
-
-        if (absX > absY * 1.2f)
-            currentDefaultAngle = movementDir.x > 0 ? rightAngle : leftAngle;
-        else if (absY > absX * 1.2f)
-            currentDefaultAngle = movementDir.y > 0 ? upAngle : downAngle;
-
-        defaultRotation = Quaternion.Euler(0f, 0f, currentDefaultAngle);
+        if (hasTarget && currentTarget != null)
+        {
+            Vector2 dir = (currentTarget.position - playerTransform.position);
+            float theta = AngleFromVector360(dir + aimOffset);
+            float baseAngle = GetBaseSpriteAngleFromTheta(theta);
+            targetRotation = Quaternion.Euler(0, 0, baseAngle);
+        }
+        else
+        {
+            Vector2 move = playerMovement ? playerMovement.GetMovementDirection() : Vector2.zero;
+            if (move.sqrMagnitude > 0.0001f)
+            {
+                float theta = AngleFromVector360(move);
+                float baseAngle = GetBaseSpriteAngleFromTheta(theta);
+                targetRotation = Quaternion.Euler(0, 0, baseAngle);
+            }
+            // si no se mueve, se mantiene el targetRotation actual (idle suave).
+        }
     }
 
-    /// <summary>
-    /// Actualiza la dirección de apuntado
-    /// </summary>
-    private void UpdateAim()
-    {
-        UpdateDefaultRotation();
-        targetRotation = hasTarget && currentTarget != null ? GetAimRotation() : defaultRotation;
-    }
-
-    /// <summary>
-    /// Calcula la rotación de apuntado hacia el objetivo
-    /// </summary>
-    private Quaternion GetAimRotation()
-    {
-        Vector2 directionToTarget = ((Vector2)(currentTarget.position - swordTip.position) + aimOffset).normalized;
-        float targetAngle = CalculateAngleFromForward(directionToTarget);
-        return Quaternion.Euler(0f, 0f, targetAngle);
-    }
-
-    /// <summary>
-    /// Calcula el ángulo desde la dirección frontal
-    /// </summary>
-    private float CalculateAngleFromForward(Vector2 targetDirection)
-    {
-        float angle = Vector2.SignedAngle(swordForwardDirection, targetDirection);
-        return transform.rotation.eulerAngles.z + angle;
-    }
-
-    /// <summary>
-    /// Aplica suavemente la rotación a la espada
-    /// </summary>
     private void ApplyRotation()
     {
-        float smoothness = hasTarget ? aimSmoothness : idleSmoothness;
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, smoothness * Time.deltaTime);
+        float s = hasTarget ? aimSmoothness : idleSmoothness;
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, s * Time.deltaTime);
     }
 
     #endregion
 
     #region Enemy Detection
 
-    /// <summary>
-    /// Encuentra el enemigo más cercano en el rango de detección
-    /// </summary>
     private void FindNearestEnemy()
     {
         if (enemiesInRange.Count == 0)
@@ -464,273 +260,224 @@ public class SwordAimAndSlash : MonoBehaviour
             return;
         }
 
-        enemiesInRange.RemoveAll(enemy => enemy == null || enemy.GetComponent<EnemyHealth>()?.IsDead == true);
+        enemiesInRange.RemoveAll(e => !e || e.GetComponent<EnemyHealth>()?.IsDead == true);
 
-        // Si ya tenemos un objetivo válido y no ha pasado suficiente tiempo, mantenlo
         if (currentTarget != null && enemiesInRange.Contains(currentTarget) && timeSinceLastTargetChange < targetLockDuration)
         {
             hasTarget = true;
             return;
         }
 
-        Transform closestEnemy = null;
-        float closestDistance = Mathf.Infinity;
+        Transform closest = null;
+        float best = float.PositiveInfinity;
+        Vector3 p = transform.position;
 
-        foreach (Transform enemy in enemiesInRange)
+        for (int i = 0; i < enemiesInRange.Count; i++)
         {
-            float distance = Vector3.Distance(transform.position, enemy.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestEnemy = enemy;
-            }
+            var t = enemiesInRange[i];
+            if (!t) continue;
+            float d = (t.position - p).sqrMagnitude; // sqr para evitar sqrt
+            if (d < best) { best = d; closest = t; }
         }
 
-        // Si hay cambio de objetivo, reiniciamos el temporizador
-        if (closestEnemy != currentTarget)
-        {
-            timeSinceLastTargetChange = 0f;
-        }
-
-        currentTarget = closestEnemy;
+        if (closest != currentTarget) timeSinceLastTargetChange = 0f;
+        currentTarget = closest;
         hasTarget = currentTarget != null;
     }
-
 
     #endregion
 
     #region Slash System
 
-    /// <summary>
-    /// Configura el collider de detección de enemigos
-    /// </summary>
     private void SetupDetection()
     {
-        var detectionCollider = GetComponent<CircleCollider2D>() ?? gameObject.AddComponent<CircleCollider2D>();
-        float scaledRadius = detectionRadius / Mathf.Max(transform.lossyScale.x, transform.lossyScale.y);
-        detectionCollider.radius = scaledRadius;
-        detectionCollider.isTrigger = true;
+        var col = GetComponent<CircleCollider2D>() ?? gameObject.AddComponent<CircleCollider2D>();
+        float s = Mathf.Max(transform.lossyScale.x, transform.lossyScale.y);
+        col.radius = detectionRadius / (s <= 0 ? 1f : s);
+        col.isTrigger = true;
     }
 
-    /// <summary>
-    /// Suscribe a los eventos del sistema de daño
-    /// </summary>
     private void SubscribeToEvents()
     {
         if (swordDamageSystem != null)
             swordDamageSystem.OnAttack += OnPlayerAttack;
     }
 
-    /// <summary>
-    /// Evento llamado cuando el jugador realiza un ataque
-    /// </summary>
     private void OnPlayerAttack()
     {
         if (!isSlashing)
             StartCoroutine(PerformSlash());
     }
 
-    /// <summary>
-    /// Corrutina principal que ejecuta la animación de slash
-    /// </summary>
     private IEnumerator PerformSlash()
     {
         isSlashing = true;
-        SlashDirectionConfig config = GetSlashDirectionConfig();
-        yield return ExecuteSlashPhases(config);
+
+        // Ángulo actual de aim para construir un slash coherente con esa dirección
+        float theta = GetCurrentAimTheta();
+        SlashDirectionConfig cfg = GetBlendedSlashConfig(theta);
+
+        // Fases
+        Quaternion startRot = transform.rotation;
+        Quaternion windUpRot = startRot * Quaternion.Euler(0, 0, cfg.windUpAngle);
+        Quaternion slashRot = windUpRot * Quaternion.Euler(0, 0, cfg.slashAngle);
+
+        float w = windUpDuration / Mathf.Max(0.0001f, slashSpeedMultiplier);
+        float s = slashDuration / Mathf.Max(0.0001f, slashSpeedMultiplier);
+        float r = returnDuration / Mathf.Max(0.0001f, slashSpeedMultiplier);
+
+        yield return RotateTo(windUpRot, w, windUpCurve);
+        yield return RotateTo(slashRot, s, slashCurve);
+        yield return RotateTo(targetRotation, r, returnCurve);
+
         isSlashing = false;
     }
 
-    /// <summary>
-    /// Ejecuta las tres fases del slash: wind-up, slash y return
-    /// </summary>
-    private IEnumerator ExecuteSlashPhases(SlashDirectionConfig config)
-    {
-        Quaternion startRotation = transform.rotation;
-        float windUpDur = windUpDuration / slashSpeedMultiplier;
-        float slashDur = slashDuration / slashSpeedMultiplier;
-        float returnDur = returnDuration / slashSpeedMultiplier;
-
-        // Wind-up phase
-        Quaternion windUpRotation = startRotation * Quaternion.Euler(0f, 0f, config.windUpAngle);
-        yield return RotateTo(windUpRotation, windUpDur, windUpCurve);
-
-        // Slash phase
-        Quaternion slashRotation = windUpRotation * Quaternion.Euler(0f, 0f, config.slashAngle);
-        yield return RotateTo(slashRotation, slashDur, slashCurve);
-
-        // Return phase
-        yield return RotateTo(targetRotation, returnDur, returnCurve);
-    }
-
-    /// <summary>
-    /// Rotación suavizada hacia un objetivo
-    /// </summary>
     private IEnumerator RotateTo(Quaternion targetRot, float duration, AnimationCurve curve)
     {
-        Quaternion startRot = transform.rotation;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
+        Quaternion start = transform.rotation;
+        float t = 0f;
+        if (duration <= 0f)
         {
-            elapsed += Time.deltaTime;
-            float t = curve.Evaluate(elapsed / duration);
-            transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
+            transform.rotation = targetRot;
+            yield break;
+        }
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float k = Mathf.Clamp01(t / duration);
+            transform.rotation = Quaternion.Slerp(start, targetRot, curve.Evaluate(k));
             yield return null;
         }
-
         transform.rotation = targetRot;
-    }
-
-    /// <summary>
-    /// Determina la configuración de slash basada en la dirección
-    /// </summary>
-    private SlashDirectionConfig GetSlashDirectionConfig()
-    {
-        if (hasTarget && currentTarget != null)
-        {
-            return GetSlashConfigFromTarget();
-        }
-        else
-        {
-            return GetSlashConfigFromMovement();
-        }
-    }
-
-    /// <summary>
-    /// Obtiene configuración de slash basada en la posición del objetivo
-    /// </summary>
-    private SlashDirectionConfig GetSlashConfigFromTarget()
-    {
-        Vector2 relativePos = (currentTarget.position - playerTransform.position).normalized;
-
-        if (Mathf.Abs(relativePos.x) > Mathf.Abs(relativePos.y))
-        {
-            return relativePos.x > 0 ? CreateRightSlashConfig() : CreateLeftSlashConfig();
-        }
-        else
-        {
-            return relativePos.y > 0 ? CreateUpSlashConfig() : CreateDownSlashConfig();
-        }
-    }
-
-    /// <summary>
-    /// Obtiene configuración de slash basada en el movimiento del jugador
-    /// </summary>
-    private SlashDirectionConfig GetSlashConfigFromMovement()
-    {
-        Vector2 movementDir = playerMovement != null ? playerMovement.GetMovementDirection() : Vector2.zero;
-
-        if (movementDir.magnitude <= 0.1f)
-        {
-            return parentTransform != null && parentTransform.localScale.x < 0 ?
-                CreateLeftSlashConfig() : CreateRightSlashConfig();
-        }
-
-        if (Mathf.Abs(movementDir.x) > Mathf.Abs(movementDir.y))
-        {
-            return movementDir.x > 0 ? CreateRightSlashConfig() : CreateLeftSlashConfig();
-        }
-        else
-        {
-            return movementDir.y > 0 ? CreateUpSlashConfig() : CreateDownSlashConfig();
-        }
-    }
-
-    /// <summary>
-    /// Crea configuración para slash derecho
-    /// </summary>
-    private SlashDirectionConfig CreateRightSlashConfig()
-    {
-        return new SlashDirectionConfig
-        {
-            windUpAngle = defaultSlashAngles.rightWindUpAngle,
-            slashAngle = defaultSlashAngles.rightSlashAngle
-        };
-    }
-
-    /// <summary>
-    /// Crea configuración para slash izquierdo
-    /// </summary>
-    private SlashDirectionConfig CreateLeftSlashConfig()
-    {
-        return new SlashDirectionConfig
-        {
-            windUpAngle = defaultSlashAngles.leftWindUpAngle,
-            slashAngle = defaultSlashAngles.leftSlashAngle
-        };
-    }
-
-    /// <summary>
-    /// Crea configuración para slash arriba
-    /// </summary>
-    private SlashDirectionConfig CreateUpSlashConfig()
-    {
-        return new SlashDirectionConfig
-        {
-            windUpAngle = GetAdjustedUpWindUpAngle(),
-            slashAngle = GetAdjustedUpSlashAngle()
-        };
-    }
-
-    /// <summary>
-    /// Crea configuración para slash abajo
-    /// </summary>
-    private SlashDirectionConfig CreateDownSlashConfig()
-    {
-        return new SlashDirectionConfig
-        {
-            windUpAngle = GetAdjustedDownWindUpAngle(),
-            slashAngle = GetAdjustedDownSlashAngle()
-        };
     }
 
     #endregion
 
-    #region Angle Adjustment
+    #region 360° Mapping (ángulos base + mezcla de slash)
 
-    /// <summary>
-    /// Ajusta el ángulo de wind-up para arriba basado en la escala del padre
-    /// </summary>
-    private float GetAdjustedUpWindUpAngle()
+    // 0..360, 0 = +X (derecha), sentido anti-horario
+    private static float AngleFromVector360(Vector2 v) =>
+        (Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg + 360f) % 360f;
+
+    // Lerp angular seguro (maneja wrap-around).
+    private static float LerpAngle(float a, float b, float t) =>
+        a + Mathf.DeltaAngle(a, b) * Mathf.Clamp01(t);
+
+    // Retorna el ángulo de sprite (en grados) mezclando Right/Up/Left/Down según theta (0=Right, 90=Up, 180=Left, 270=Down).
+    private float GetBaseSpriteAngleFromTheta(float theta)
     {
-        float angle = defaultSlashAngles.upWindUpAngle;
-        return parentTransform != null && Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
+        // Determina el sector y la mezcla
+        if (theta < 90f)
+        {
+            float t = theta / 90f;
+            return LerpAngle(rightAngle, upAngle, t);
+        }
+        else if (theta < 180f)
+        {
+            float t = (theta - 90f) / 90f;
+            return LerpAngle(upAngle, leftAngle, t);
+        }
+        else if (theta < 270f)
+        {
+            float t = (theta - 180f) / 90f;
+            return LerpAngle(leftAngle, downAngle, t);
+        }
+        else
+        {
+            float t = (theta - 270f) / 90f;
+            return LerpAngle(downAngle, rightAngle, t);
+        }
     }
 
-    /// <summary>
-    /// Ajusta el ángulo de slash para arriba basado en la escala del padre
-    /// </summary>
-    private float GetAdjustedUpSlashAngle()
+    // Configuración de slash interpolada desde presets (Right/Up/Left/Down) según theta.
+    private SlashDirectionConfig GetBlendedSlashConfig(float theta)
     {
-        float angle = defaultSlashAngles.upSlashAngle;
-        return parentTransform != null && Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
+        // Crea 4 configs base
+        var rightCfg = new SlashDirectionConfig
+        {
+            windUpAngle = defaultSlashAngles.rightWindUpAngle,
+            slashAngle = defaultSlashAngles.rightSlashAngle
+        };
+
+        var leftCfg = new SlashDirectionConfig
+        {
+            windUpAngle = defaultSlashAngles.leftWindUpAngle,
+            slashAngle = defaultSlashAngles.leftSlashAngle
+        };
+
+        // Up/Down ajustan signo si tu parent está “flippeado” como en tu lógica original
+        var upCfg = new SlashDirectionConfig
+        {
+            windUpAngle = AdjustUpDown(defaultSlashAngles.upWindUpAngle),
+            slashAngle = AdjustUpDown(defaultSlashAngles.upSlashAngle)
+        };
+
+        var downCfg = new SlashDirectionConfig
+        {
+            windUpAngle = AdjustUpDown(defaultSlashAngles.downWindUpAngle),
+            slashAngle = AdjustUpDown(defaultSlashAngles.downSlashAngle)
+        };
+
+        // Mezcla por sector
+        if (theta < 90f)
+        {
+            float t = theta / 90f;
+            return LerpSlashConfig(rightCfg, upCfg, t);
+        }
+        else if (theta < 180f)
+        {
+            float t = (theta - 90f) / 90f;
+            return LerpSlashConfig(upCfg, leftCfg, t);
+        }
+        else if (theta < 270f)
+        {
+            float t = (theta - 180f) / 90f;
+            return LerpSlashConfig(leftCfg, downCfg, t);
+        }
+        else
+        {
+            float t = (theta - 270f) / 90f;
+            return LerpSlashConfig(downCfg, rightCfg, t);
+        }
     }
 
-    /// <summary>
-    /// Ajusta el ángulo de wind-up para abajo basado en la escala del padre
-    /// </summary>
-    private float GetAdjustedDownWindUpAngle()
+    private SlashDirectionConfig LerpSlashConfig(SlashDirectionConfig a, SlashDirectionConfig b, float t)
     {
-        float angle = defaultSlashAngles.downWindUpAngle;
-        return parentTransform != null && Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
+        return new SlashDirectionConfig
+        {
+            windUpAngle = LerpAngle(a.windUpAngle, b.windUpAngle, t),
+            slashAngle = LerpAngle(a.slashAngle, b.slashAngle, t)
+        };
     }
 
-    /// <summary>
-    /// Ajusta el ángulo de slash para abajo basado en la escala del padre
-    /// </summary>
-    private float GetAdjustedDownSlashAngle()
+    // Conserva tu comportamiento de invertir Up/Down según flip X del parent (por compatibilidad visual)
+    private float AdjustUpDown(float angle)
     {
-        float angle = defaultSlashAngles.downSlashAngle;
-        return parentTransform != null && Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
+        if (!parentTransform) return angle;
+        // Si tu sprite “mirando a la derecha” implica invertir vertical, copia tu condición:
+        return Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
+    }
+
+    private float GetCurrentAimTheta()
+    {
+        if (hasTarget && currentTarget)
+            return AngleFromVector360((Vector2)(currentTarget.position - playerTransform.position) + aimOffset);
+
+        Vector2 move = playerMovement ? playerMovement.GetMovementDirection() : Vector2.zero;
+        if (move.sqrMagnitude < 0.0001f)
+        {
+            // Si está quieto, usa el ángulo actual del targetRotation para coherencia
+            return (targetRotation.eulerAngles.z - rightAngle + 360f) % 360f;
+        }
+        return AngleFromVector360(move);
     }
 
     #endregion
 }
 
-/// <summary>
-/// Configuración para la animación de slash
-/// </summary>
+/// <summary> Configuración para la animación de slash (delta de rotación). </summary>
 public class SlashDirectionConfig
 {
     public float windUpAngle;

@@ -16,8 +16,16 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 1264051147086912737, guid: f85a5184afed73242a56fd8a7c637531, type: 3}
     startRound: 1
     endRound: 5
-    enemiesPerSpawn: 5
+    enemiesPerSpawn: 2
+    spawnInterval: 3
+    enemiesPerRoundIncrease: 1
+    intervalReductionPerRound: 0.2
+    minInterval: 1
+  - enemyPrefab: {fileID: 1264051147086912737, guid: 46e57764c93f48444a5ee4f6de194a37, type: 3}
+    startRound: 3
+    endRound: 8
+    enemiesPerSpawn: 3
     spawnInterval: 2
-    enemiesPerRoundIncrease: 3
-    intervalReductionPerRound: 0.4
+    enemiesPerRoundIncrease: 1
+    intervalReductionPerRound: 0.2
     minInterval: 1
