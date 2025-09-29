@@ -1,0 +1,1267 @@
+fileFormatVersion: 2
+guid: 99869471a2b17954194e75c2e7c3bdb0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3337990251107342295
+    second: muerte_murcielago_Rayo-Sheet_0
+  - first:
+      213: -7347169797751768077
+    second: muerte_murcielago_Rayo-Sheet_1
+  - first:
+      213: -705235363684542547
+    second: muerte_murcielago_Rayo-Sheet_2
+  - first:
+      213: -2239658269075681259
+    second: muerte_murcielago_Rayo-Sheet_3
+  - first:
+      213: -4226564991815936746
+    second: muerte_murcielago_Rayo-Sheet_4
+  - first:
+      213: -2605956438807631522
+    second: muerte_murcielago_Rayo-Sheet_5
+  - first:
+      213: 6228616852923111540
+    second: muerte_murcielago_Rayo-Sheet_6
+  - first:
+      213: 4780873597079813263
+    second: muerte_murcielago_Rayo-Sheet_7
+  - first:
+      213: 3388470012848387981
+    second: muerte_murcielago_Rayo-Sheet_8
+  - first:
+      213: -741378333282827949
+    second: muerte_murcielago_Rayo-Sheet_9
+  - first:
+      213: 4543552092371748903
+    second: muerte_murcielago_Rayo-Sheet_10
+  - first:
+      213: -337644658945472529
+    second: muerte_murcielago_Rayo-Sheet_11
+  - first:
+      213: 8926172966456172665
+    second: muerte_murcielago_Rayo-Sheet_12
+  - first:
+      213: -5784532884339857379
+    second: muerte_murcielago_Rayo-Sheet_13
+  - first:
+      213: 7260162785335576254
+    second: muerte_murcielago_Rayo-Sheet_14
+  - first:
+      213: -300484545186533356
+    second: muerte_murcielago_Rayo-Sheet_15
+  - first:
+      213: -1463240803863917328
+    second: muerte_murcielago_Rayo-Sheet_16
+  - first:
+      213: -1178471327883116267
+    second: muerte_murcielago_Rayo-Sheet_17
+  - first:
+      213: -6980786432573982663
+    second: muerte_murcielago_Rayo-Sheet_18
+  - first:
+      213: 1074047251500858853
+    second: muerte_murcielago_Rayo-Sheet_19
+  - first:
+      213: -7511537830006569099
+    second: muerte_murcielago_Rayo-Sheet_20
+  - first:
+      213: -4871315935664745960
+    second: muerte_murcielago_Rayo-Sheet_21
+  - first:
+      213: -5196446934757561233
+    second: muerte_murcielago_Rayo-Sheet_22
+  - first:
+      213: -1612267927112641649
+    second: muerte_murcielago_Rayo-Sheet_23
+  - first:
+      213: -341969023876537319
+    second: muerte_murcielago_Rayo-Sheet_24
+  - first:
+      213: 8094892750888469467
+    second: muerte_murcielago_Rayo-Sheet_25
+  - first:
+      213: -5504245919046342871
+    second: muerte_murcielago_Rayo-Sheet_26
+  - first:
+      213: -4954601685074010555
+    second: muerte_murcielago_Rayo-Sheet_27
+  - first:
+      213: -3746260608815794176
+    second: muerte_murcielago_Rayo-Sheet_28
+  - first:
+      213: -3448289340821143359
+    second: muerte_murcielago_Rayo-Sheet_29
+  - first:
+      213: 4214553020645269488
+    second: muerte_murcielago_Rayo-Sheet_30
+  - first:
+      213: -7312919391051822429
+    second: muerte_murcielago_Rayo-Sheet_31
+  - first:
+      213: 5195526151093892180
+    second: muerte_murcielago_Rayo-Sheet_32
+  - first:
+      213: 4946047877538210313
+    second: muerte_murcielago_Rayo-Sheet_33
+  - first:
+      213: -3330492278364945784
+    second: muerte_murcielago_Rayo-Sheet_34
+  - first:
+      213: 3312086700468353102
+    second: muerte_murcielago_Rayo-Sheet_35
+  - first:
+      213: -2325566032931375472
+    second: muerte_murcielago_Rayo-Sheet_36
+  - first:
+      213: 5896539411575872079
+    second: muerte_murcielago_Rayo-Sheet_37
+  - first:
+      213: 5930074423279087983
+    second: muerte_murcielago_Rayo-Sheet_38
+  - first:
+      213: -4461335241811082635
+    second: muerte_murcielago_Rayo-Sheet_39
+  - first:
+      213: 7254017885629023942
+    second: muerte_murcielago_Rayo-Sheet_40
+  - first:
+      213: 8715638422980754993
+    second: muerte_murcielago_Rayo-Sheet_41
+  - first:
+      213: 6001230249890076500
+    second: muerte_murcielago_Rayo-Sheet_42
+  - first:
+      213: -7393096191693524303
+    second: muerte_murcielago_Rayo-Sheet_43
+  - first:
+      213: -5348445865389688810
+    second: muerte_murcielago_Rayo-Sheet_44
+  - first:
+      213: -6302700371854909665
+    second: muerte_murcielago_Rayo-Sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d758fca27ce25e20800000000000000
+      internalID: 3337990251107342295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbf684fefb990a90800000000000000
+      internalID: -7347169797751768077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da71a885c208636f0800000000000000
+      internalID: -705235363684542547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5105a75aba22be0e0800000000000000
+      internalID: -2239658269075681259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61595b288893855c0800000000000000
+      internalID: -4226564991815936746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59aab40d68c5dbd0800000000000000
+      internalID: -2605956438807631522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4785e70f60e707650800000000000000
+      internalID: 6228616852923111540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 28
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c7cf5d433195240800000000000000
+      internalID: 4780873597079813263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 19
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8734e71683460f20800000000000000
+      internalID: 3388470012848387981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3518188755816b5f0800000000000000
+      internalID: -741378333282827949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7280d442e80fd0f30800000000000000
+      internalID: 4543552092371748903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 28
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe74f3bb8f1705bf0800000000000000
+      internalID: -337644658945472529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 19
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970a055250320eb70800000000000000
+      internalID: 8926172966456172665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 28
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d186b5d4df539bfa0800000000000000
+      internalID: -5784532884339857379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 19
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb60077569741c460800000000000000
+      internalID: 7260162785335576254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 30
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41079afe5e674dbf0800000000000000
+      internalID: -300484545186533356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 28
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc85d0dd3681bbe0800000000000000
+      internalID: -1463240803863917328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 43
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5114b83329a35afe0800000000000000
+      internalID: -1178471327883116267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 29
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938bf81b9b34f1f90800000000000000
+      internalID: -6980786432573982663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 28
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed71b1e848c7ee00800000000000000
+      internalID: 1074047251500858853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 43
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577cc853428a1c790800000000000000
+      internalID: -7511537830006569099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 44
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812d00247fb956cb0800000000000000
+      internalID: -4871315935664745960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 30
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cab977b0382e7b0800000000000000
+      internalID: -5196446934757561233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 34
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8312b9ccd210a9e0800000000000000
+      internalID: -1612267927112641649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 44
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914e6af0cf4114bf0800000000000000
+      internalID: -341969023876537319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 47
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3879f7116d65070800000000000000
+      internalID: 8094892750888469467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 33
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92769d6df7dfc93b0800000000000000
+      internalID: -5504245919046342871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 34
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e9c9d9408bd3bb0800000000000000
+      internalID: -4954601685074010555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 45
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008fe7723db920cc0800000000000000
+      internalID: -3746260608815794176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 49
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c007954d173520d0800000000000000
+      internalID: -3448289340821143359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 39
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff5c9284a91d7a30800000000000000
+      internalID: 4214553020645269488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 38
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa4a413f8a438a90800000000000000
+      internalID: -7312919391051822429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 49
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4543431e1873a1840800000000000000
+      internalID: 5195526151093892180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 50
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9026dbed654e3a440800000000000000
+      internalID: 4946047877538210313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 40
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88240e42be6b7c1d0800000000000000
+      internalID: -3330492278364945784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 41
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4836be4e45e6fd20800000000000000
+      internalID: 3312086700468353102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 44
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0963961b30ee9bfd0800000000000000
+      internalID: -2325566032931375472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 29
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a12178a57b4d150800000000000000
+      internalID: 5896539411575872079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 27
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61fd23e44bdb4250800000000000000
+      internalID: 5930074423279087983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 23
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5724be71c372612c0800000000000000
+      internalID: -4461335241811082635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 29
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c68f3365d27ba460800000000000000
+      internalID: 7254017885629023942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 30
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e7380e7fa24f870800000000000000
+      internalID: 8715638422980754993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 31
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457d60ccd17a84350800000000000000
+      internalID: 6001230249890076500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 32
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b270d71f22766990800000000000000
+      internalID: -7393096191693524303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 19
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6187a0d92d086c5b0800000000000000
+      internalID: -5348445865389688810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_murcielago_Rayo-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 19
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f9dd9a76f4888a0800000000000000
+      internalID: -6302700371854909665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
