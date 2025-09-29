@@ -1,0 +1,1042 @@
+fileFormatVersion: 2
+guid: 7e58a108d60efa844867b8cab29df2e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2301057368822756079
+    second: murte_murcielago_sangre-Sheet_0
+  - first:
+      213: 6351730053306251276
+    second: murte_murcielago_sangre-Sheet_1
+  - first:
+      213: -4513575911206704690
+    second: murte_murcielago_sangre-Sheet_2
+  - first:
+      213: -6208842294070905518
+    second: murte_murcielago_sangre-Sheet_3
+  - first:
+      213: -8158074871468663440
+    second: murte_murcielago_sangre-Sheet_4
+  - first:
+      213: 2453275391562675145
+    second: murte_murcielago_sangre-Sheet_5
+  - first:
+      213: -2837634310345781989
+    second: murte_murcielago_sangre-Sheet_6
+  - first:
+      213: -2449170849482244556
+    second: murte_murcielago_sangre-Sheet_7
+  - first:
+      213: -7293979273329035105
+    second: murte_murcielago_sangre-Sheet_8
+  - first:
+      213: 3165687598648030466
+    second: murte_murcielago_sangre-Sheet_9
+  - first:
+      213: 1947492069487903611
+    second: murte_murcielago_sangre-Sheet_10
+  - first:
+      213: 3237706945241465699
+    second: murte_murcielago_sangre-Sheet_11
+  - first:
+      213: 248368966004515324
+    second: murte_murcielago_sangre-Sheet_12
+  - first:
+      213: -4913164165900817285
+    second: murte_murcielago_sangre-Sheet_13
+  - first:
+      213: -8023444290764612364
+    second: murte_murcielago_sangre-Sheet_14
+  - first:
+      213: 4503168794066113977
+    second: murte_murcielago_sangre-Sheet_15
+  - first:
+      213: 3104517779316801743
+    second: murte_murcielago_sangre-Sheet_16
+  - first:
+      213: -4929799272372057634
+    second: murte_murcielago_sangre-Sheet_17
+  - first:
+      213: -6947172809455566605
+    second: murte_murcielago_sangre-Sheet_18
+  - first:
+      213: 697238561988433289
+    second: murte_murcielago_sangre-Sheet_19
+  - first:
+      213: -3893465418931839816
+    second: murte_murcielago_sangre-Sheet_20
+  - first:
+      213: -5150228904434911768
+    second: murte_murcielago_sangre-Sheet_21
+  - first:
+      213: -4251965501443123520
+    second: murte_murcielago_sangre-Sheet_22
+  - first:
+      213: -7088702071458212480
+    second: murte_murcielago_sangre-Sheet_23
+  - first:
+      213: 3721882531285877092
+    second: murte_murcielago_sangre-Sheet_24
+  - first:
+      213: -5015869181892046584
+    second: murte_murcielago_sangre-Sheet_25
+  - first:
+      213: 2297594710497889709
+    second: murte_murcielago_sangre-Sheet_26
+  - first:
+      213: 4118209202265373048
+    second: murte_murcielago_sangre-Sheet_27
+  - first:
+      213: 4641834453573755057
+    second: murte_murcielago_sangre-Sheet_28
+  - first:
+      213: 5156854536354351628
+    second: murte_murcielago_sangre-Sheet_29
+  - first:
+      213: 8012005473280157731
+    second: murte_murcielago_sangre-Sheet_30
+  - first:
+      213: 3157052900743515001
+    second: murte_murcielago_sangre-Sheet_31
+  - first:
+      213: -6840433716520747323
+    second: murte_murcielago_sangre-Sheet_32
+  - first:
+      213: -5316104636366673022
+    second: murte_murcielago_sangre-Sheet_33
+  - first:
+      213: 521506869977668482
+    second: murte_murcielago_sangre-Sheet_34
+  - first:
+      213: 1211892715266306005
+    second: murte_murcielago_sangre-Sheet_35
+  - first:
+      213: 5787923974558669072
+    second: murte_murcielago_sangre-Sheet_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d468bb3800110e0800000000000000
+      internalID: -2301057368822756079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08fd70a4d0e52850800000000000000
+      internalID: 6351730053306251276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9a3c96f9e8c51c0800000000000000
+      internalID: -4513575911206704690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2557b7354d2c5d9a0800000000000000
+      internalID: -6208842294070905518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07dd113b022b8ce80800000000000000
+      internalID: -8158074871468663440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3fc4a78f8cb0220800000000000000
+      internalID: 2453275391562675145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d016111a2be98d0800000000000000
+      internalID: -2837634310345781989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e7e52b61cc20ed0800000000000000
+      internalID: -2449170849482244556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98392efe7496ca90800000000000000
+      internalID: -7293979273329035105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 19
+        width: 64
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20576433918ceeb20800000000000000
+      internalID: 3165687598648030466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 20
+        width: 64
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7387bc08b1e60b10800000000000000
+      internalID: 1947492069487903611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 23
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363cee50055aeec20800000000000000
+      internalID: 3237706945241465699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 18
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf12ee73242627300800000000000000
+      internalID: 248368966004515324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 25
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cad40e83fe0dbb0800000000000000
+      internalID: -4913164165900817285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 19
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcd6d57deff6a090800000000000000
+      internalID: -8023444290764612364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 22
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b55fedc8287e7e30800000000000000
+      internalID: 4503168794066113977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 18
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0001bc876751b20800000000000000
+      internalID: 3104517779316801743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 26
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9c8445ea5d59bb0800000000000000
+      internalID: -4929799272372057634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 19
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f00623332fa69f90800000000000000
+      internalID: -6947172809455566605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 29
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985560b27c61da900800000000000000
+      internalID: 697238561988433289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 17
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcdc4774d1a7f9c0800000000000000
+      internalID: -3893465418931839816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 28
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e535373916b688b0800000000000000
+      internalID: -5150228904434911768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 33
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6544187ebfdf4c0800000000000000
+      internalID: -4251965501443123520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 22
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0855828060fdf9d90800000000000000
+      internalID: -7088702071458212480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 23
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461c60d5178c6a330800000000000000
+      internalID: 3721882531285877092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 20
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 801de75ed8d046ab0800000000000000
+      internalID: -5015869181892046584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 32
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad0b0d4732b2ef10800000000000000
+      internalID: 2297594710497889709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 27
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879b5c34371d62930800000000000000
+      internalID: 4118209202265373048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 34
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0ee6f87db1b6040800000000000000
+      internalID: 4641834453573755057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 35
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a43cde0e3d09740800000000000000
+      internalID: 5156854536354351628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 27
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328695d478c503f60800000000000000
+      internalID: 8012005473280157731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 24
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b0fede2ea10db20800000000000000
+      internalID: 3157052900743515001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 40
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cefc29e6c5e111a0800000000000000
+      internalID: -6840433716520747323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 41
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bae88cff66936b0800000000000000
+      internalID: -5316104636366673022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 25
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bd1f43cb3cc3700800000000000000
+      internalID: 521506869977668482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 17
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfe45fe00281d010800000000000000
+      internalID: 1211892715266306005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: murte_murcielago_sangre-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 24
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019598a6036d25050800000000000000
+      internalID: 5787923974558669072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
