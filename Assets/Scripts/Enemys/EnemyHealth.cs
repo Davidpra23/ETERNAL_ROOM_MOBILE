@@ -85,6 +85,9 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         deathPosition = transform.position;
 
+        if (animator != null)
+            animator.SetTrigger("Death");
+
         // ✅ Notificar al WaveManager que este enemigo murió
         if (WaveManager.Instance != null)
         {
@@ -110,12 +113,16 @@ public class EnemyHealth : MonoBehaviour
         {
             StartCoroutine(SpawnDeathEffectWithDelay());
         }
+        Invoke("DestroySelf", 1.0f); // 1.0f = duración del clip DEATH
 
         PlayerCurrency.Instance?.AddCoins(coinReward);
         OnDeath?.Invoke();
         transform.position = deathPosition;
     }
-
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
     private void DropCoins()
     {
         if (coinPrefab == null)
@@ -148,7 +155,7 @@ public class EnemyHealth : MonoBehaviour
                 ).normalized;
 
                 coinRb.AddForce(forceDirection * coinDropForce, ForceMode2D.Impulse);
-                
+
                 // Rotación aleatoria
                 coinRb.AddTorque(Random.Range(-5f, 5f), ForceMode2D.Impulse);
             }

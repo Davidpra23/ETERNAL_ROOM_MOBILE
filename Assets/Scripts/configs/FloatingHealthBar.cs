@@ -21,7 +21,6 @@ public class FloatingHealthBar : MonoBehaviour
     [Header("Visibility Settings")]
     [SerializeField] private bool hideWhenFullHealth = true;
     [SerializeField] private float fadeDuration = 0.3f;
-    [SerializeField] private float playerSearchInterval = 1f; // Intervalo de búsqueda
 
     [Header("Damage Effects")]
     [SerializeField] private Color damageFlashColor = Color.white;
@@ -35,30 +34,17 @@ public class FloatingHealthBar : MonoBehaviour
     private Color originalFillColor;
     private bool isVisible = true;
     private Coroutine flashCoroutine;
-    private Coroutine searchCoroutine;
-    private bool isInitialized = false;
 
     void Start()
     {
         mainCamera = Camera.main;
-        
-        // Configurar componentes UI
-        InitializeUIComponents();
-        
-        // Iniciar búsqueda constante del player
-        searchCoroutine = StartCoroutine(ContinuousPlayerSearch());
-    }
 
-    private void InitializeUIComponents()
-    {
-        // Obtener o crear CanvasGroup
+        // CanvasGroup de respaldo
         if (canvasGroup == null)
         {
             canvasGroup = GetComponent<CanvasGroup>();
             if (canvasGroup == null)
-            {
                 canvasGroup = gameObject.AddComponent<CanvasGroup>();
-            }
         }
 
         // Guardar el ancho máximo y posición original
@@ -68,98 +54,53 @@ public class FloatingHealthBar : MonoBehaviour
             originalPosition = healthFillRect.anchoredPosition;
         }
 
-        // Guardar color original
         if (healthFillImage != null)
         {
             originalFillColor = healthFillImage.color;
         }
+
+        // Iniciar búsqueda del player
+        StartCoroutine(LatePlayerAssignRoutine());
     }
 
-    private IEnumerator ContinuousPlayerSearch()
+    private IEnumerator LatePlayerAssignRoutine()
     {
-        while (true)
+        // Seguir buscando hasta encontrar al Player
+        while (playerTransform == null || playerHealth == null)
         {
-            // Buscar player si no está asignado
-            if (playerTransform == null || playerHealth == null)
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
             {
-                FindPlayer();
+                playerTransform = player.transform;
+                playerHealth = player.GetComponent<PlayerHealth>();
+
+                if (playerHealth != null)
+                {
+                    // Suscribirse a eventos
+                    playerHealth.OnHealthChanged.AddListener(UpdateHealthBar);
+                    playerHealth.OnDamageTaken.AddListener(OnDamageTaken);
+
+                    // Configuración inicial
+                    UpdateHealthBar(playerHealth.CurrentHealth, playerHealth.MaxHealth);
+
+                    if (hideWhenFullHealth)
+                    {
+                        canvasGroup.alpha = 
+                            (playerHealth.CurrentHealth == playerHealth.MaxHealth) ? 0f : 1f;
+                        isVisible = canvasGroup.alpha > 0f;
+                    }
+
+                    yield break; // salir cuando ya está todo listo
+                }
             }
 
-            // Si encontramos al player, inicializar la barra de salud
-            if (playerTransform != null && playerHealth != null && !isInitialized)
-            {
-                InitializeHealthBar();
-            }
-
-            yield return new WaitForSeconds(playerSearchInterval);
+            yield return new WaitForSeconds(0.5f); // evita sobrecargar el Update
         }
-    }
-
-    private void FindPlayer()
-    {
-        // Buscar por tag
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerTransform = player.transform;
-            playerHealth = player.GetComponent<PlayerHealth>();
-            
-            if (playerHealth != null)
-            {
-                Debug.Log("Player encontrado y asignado: " + player.name);
-            }
-            else
-            {
-                Debug.LogWarning("Player encontrado pero no tiene componente PlayerHealth: " + player.name);
-            }
-        }
-        else
-        {
-            // Opcional: Buscar por nombre o tipo
-            PlayerHealth foundHealth = FindObjectOfType<PlayerHealth>();
-            if (foundHealth != null)
-            {
-                playerHealth = foundHealth;
-                playerTransform = foundHealth.transform;
-                Debug.Log("PlayerHealth encontrado y asignado: " + foundHealth.name);
-            }
-        }
-    }
-
-    private void InitializeHealthBar()
-    {
-        if (playerHealth == null) return;
-
-        // Suscribirse a los eventos de salud
-        playerHealth.OnHealthChanged.AddListener(UpdateHealthBar);
-        playerHealth.OnDamageTaken.AddListener(OnDamageTaken);
-        
-        // Configurar visibilidad inicial INMEDIATAMENTE
-        if (hideWhenFullHealth)
-        {
-            // Ocultar inmediatamente sin animación si está en vida completa
-            if (playerHealth.CurrentHealth == playerHealth.MaxHealth)
-            {
-                canvasGroup.alpha = 0f;
-                isVisible = false;
-            }
-            else
-            {
-                canvasGroup.alpha = 1f;
-                isVisible = true;
-            }
-        }
-
-        // Configurar valores iniciales de la barra
-        UpdateHealthBar(playerHealth.CurrentHealth, playerHealth.MaxHealth);
-        
-        isInitialized = true;
-        Debug.Log("Barra de salud inicializada correctamente");
     }
 
     void Update()
     {
-        if (playerTransform == null || !isInitialized) return;
+        if (playerTransform == null) return;
         
         // Seguir al player
         transform.position = playerTransform.position + worldOffset;
@@ -173,60 +114,40 @@ public class FloatingHealthBar : MonoBehaviour
 
     private void UpdateHealthBar(int currentHealth, int maxHealth)
     {
-        if (!isInitialized) return;
-
-        // Actualizar tamaño de la barra
         if (healthFillRect != null)
         {
             float fillPercentage = (float)currentHealth / maxHealth;
             float newWidth = maxFillWidth * fillPercentage;
-            
-            healthFillRect.SetSizeWithCurrentAnchors(
-                RectTransform.Axis.Horizontal, 
-                newWidth
-            );
-            
+
+            healthFillRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newWidth);
+
             healthFillRect.anchoredPosition = new Vector2(
                 originalPosition.x - (maxFillWidth - newWidth) / 2f,
                 originalPosition.y
             );
         }
-        
-        // Actualizar texto
+
         if (healthText != null)
         {
             healthText.text = $"{currentHealth}/{maxHealth}";
         }
 
-        // Manejar visibilidad
         if (hideWhenFullHealth)
         {
             if (currentHealth == maxHealth && currentHealth > 0)
-            {
                 HideBar();
-            }
             else if (!isVisible)
-            {
                 ShowBar();
-            }
         }
     }
 
     private void OnDamageTaken()
     {
-        if (!isInitialized) return;
-
-        // Efecto de parpadeo
         if (healthFillImage != null && flashCoroutine == null)
-        {
             flashCoroutine = StartCoroutine(FlashHealthBar());
-        }
 
-        // Mostrar barra si está oculta
         if (!isVisible && hideWhenFullHealth)
-        {
             ShowBar();
-        }
     }
 
     private IEnumerator FlashHealthBar()
@@ -237,12 +158,10 @@ public class FloatingHealthBar : MonoBehaviour
             {
                 healthFillImage.color = damageFlashColor;
                 yield return new WaitForSeconds(flashDuration / 2);
-                
                 healthFillImage.color = originalFillColor;
                 yield return new WaitForSeconds(flashDuration / 2);
             }
         }
-        
         flashCoroutine = null;
     }
 
@@ -277,69 +196,15 @@ public class FloatingHealthBar : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
         canvasGroup.alpha = targetAlpha;
-    }
-
-    // Método público para forzar la búsqueda del player
-    public void ForcePlayerSearch()
-    {
-        if (searchCoroutine != null)
-        {
-            StopCoroutine(searchCoroutine);
-        }
-        searchCoroutine = StartCoroutine(ContinuousPlayerSearch());
-    }
-
-    // Método público para asignar el player manualmente
-    public void SetPlayer(Transform player, PlayerHealth health)
-    {
-        // Desuscribirse del player anterior
-        if (playerHealth != null && isInitialized)
-        {
-            playerHealth.OnHealthChanged.RemoveListener(UpdateHealthBar);
-            playerHealth.OnDamageTaken.RemoveListener(OnDamageTaken);
-        }
-
-        playerTransform = player;
-        playerHealth = health;
-        isInitialized = false;
-
-        // Reinicializar con el nuevo player
-        if (player != null && health != null)
-        {
-            InitializeHealthBar();
-        }
     }
 
     void OnDestroy()
     {
-        // Desuscribirse de los eventos al destruir
-        if (playerHealth != null && isInitialized)
+        if (playerHealth != null)
         {
             playerHealth.OnHealthChanged.RemoveListener(UpdateHealthBar);
             playerHealth.OnDamageTaken.RemoveListener(OnDamageTaken);
-        }
-
-        // Detener corrutinas
-        if (searchCoroutine != null)
-        {
-            StopCoroutine(searchCoroutine);
-        }
-        if (flashCoroutine != null)
-        {
-            StopCoroutine(flashCoroutine);
-        }
-    }
-
-    // Método para debug en el editor
-    private void OnDrawGizmosSelected()
-    {
-        if (playerTransform != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(playerTransform.position + worldOffset, 0.3f);
-            Gizmos.DrawLine(transform.position, playerTransform.position + worldOffset);
         }
     }
 }

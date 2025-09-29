@@ -44,8 +44,7 @@ public class IntroDialogue : MonoBehaviour
 
         // Fade Out del panel completo
         yield return StartCoroutine(FadeCanvasGroup(blackPanel, 1f, 0f, fadeOutDuration));
-        blackPanel.gameObject.SetActive(false);
-
+    
         // Activar el script final
         if (scriptToActivate != null)
             scriptToActivate.enabled = true;
