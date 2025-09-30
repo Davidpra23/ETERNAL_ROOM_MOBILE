@@ -3,6 +3,8 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    public int CurrentScore => currentScore;
+
     public static ScoreManager Instance { get; private set; }
 
     [SerializeField] private TMP_Text scoreText; // Usamos TMP_Text en lugar de Text
@@ -22,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int value)
     {
         currentScore += value;
+        if (currentScore < 0) currentScore = 0;
         UpdateScoreText();
     }
 

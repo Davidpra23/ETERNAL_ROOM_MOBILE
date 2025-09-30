@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca492ecdc267ff640bf579494fb4f62c
+guid: b482404202fdf99409a98ed1ff0f957d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - ThaleahFat
+  - Pixellari
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

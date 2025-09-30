@@ -54,11 +54,17 @@ public class UpgradeUI : MonoBehaviour
                 // 2) Oculta el panel y limpia
                 HideAndClear();
 
-                // 3) (Opcional) Si pausaste el juego, reanuda aquí
-                // Time.timeScale = 1f;
-
-                // 4) Pide al WaveManager que muestre el botón y prepare la siguiente oleada
-                WaveManager.Instance?.PrepareNextWave();
+                // Mostrar tienda
+                var shop = FindObjectOfType<ShopManager>();
+                if (shop != null)
+                {
+                    shop.ShowShop(); // La tienda, al cerrarse, llamará a WaveManager.Instance.PrepareNextWave()
+                }
+                else
+                {
+                    // Fallback si no hay ShopManager en escena:
+                    WaveManager.Instance?.PrepareNextWave();
+                }
             });
         }
     }

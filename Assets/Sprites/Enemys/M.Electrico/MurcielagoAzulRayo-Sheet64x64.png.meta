@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MurcielagoAzulRayo-Sheet64x64_0: -2219352776783097574
+      MurcielagoAzulRayo-Sheet64x64_1: 3072488993514930774
+      MurcielagoAzulRayo-Sheet64x64_2: 8379552815134325124
+      MurcielagoAzulRayo-Sheet64x64_3: -2581415042921173369
+      MurcielagoAzulRayo-Sheet64x64_4: 6393320205738553676
+      MurcielagoAzulRayo-Sheet64x64_5: 974008269685277988
+      MurcielagoAzulRayo-Sheet64x64_6: -2105518749302078564
+      MurcielagoAzulRayo-Sheet64x64_7: -7116597925323234090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
