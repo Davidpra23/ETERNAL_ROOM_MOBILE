@@ -123,6 +123,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -359,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MurcielagoFuego-Sheet64x64_0: -2266796793165738201
+      MurcielagoFuego-Sheet64x64_1: 8991037276800434384
+      MurcielagoFuego-Sheet64x64_2: -9149465744535342642
+      MurcielagoFuego-Sheet64x64_3: 8676080395044092430
+      MurcielagoFuego-Sheet64x64_4: -3397957481130159997
+      MurcielagoFuego-Sheet64x64_5: 4862123681954587029
+      MurcielagoFuego-Sheet64x64_6: 2651697981913560423
+      MurcielagoFuego-Sheet64x64_7: 566844643227000773
+      MurcielagoFuego-Sheet64x64_8: -7702436661535047788
+      MurcielagoFuego-Sheet64x64_9: -685566012553071291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

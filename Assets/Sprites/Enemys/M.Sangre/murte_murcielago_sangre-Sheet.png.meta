@@ -204,6 +204,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1034,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      murte_murcielago_sangre-Sheet_0: -2301057368822756079
+      murte_murcielago_sangre-Sheet_1: 6351730053306251276
+      murte_murcielago_sangre-Sheet_10: 1947492069487903611
+      murte_murcielago_sangre-Sheet_11: 3237706945241465699
+      murte_murcielago_sangre-Sheet_12: 248368966004515324
+      murte_murcielago_sangre-Sheet_13: -4913164165900817285
+      murte_murcielago_sangre-Sheet_14: -8023444290764612364
+      murte_murcielago_sangre-Sheet_15: 4503168794066113977
+      murte_murcielago_sangre-Sheet_16: 3104517779316801743
+      murte_murcielago_sangre-Sheet_17: -4929799272372057634
+      murte_murcielago_sangre-Sheet_18: -6947172809455566605
+      murte_murcielago_sangre-Sheet_19: 697238561988433289
+      murte_murcielago_sangre-Sheet_2: -4513575911206704690
+      murte_murcielago_sangre-Sheet_20: -3893465418931839816
+      murte_murcielago_sangre-Sheet_21: -5150228904434911768
+      murte_murcielago_sangre-Sheet_22: -4251965501443123520
+      murte_murcielago_sangre-Sheet_23: -7088702071458212480
+      murte_murcielago_sangre-Sheet_24: 3721882531285877092
+      murte_murcielago_sangre-Sheet_25: -5015869181892046584
+      murte_murcielago_sangre-Sheet_26: 2297594710497889709
+      murte_murcielago_sangre-Sheet_27: 4118209202265373048
+      murte_murcielago_sangre-Sheet_28: 4641834453573755057
+      murte_murcielago_sangre-Sheet_29: 5156854536354351628
+      murte_murcielago_sangre-Sheet_3: -6208842294070905518
+      murte_murcielago_sangre-Sheet_30: 8012005473280157731
+      murte_murcielago_sangre-Sheet_31: 3157052900743515001
+      murte_murcielago_sangre-Sheet_32: -6840433716520747323
+      murte_murcielago_sangre-Sheet_33: -5316104636366673022
+      murte_murcielago_sangre-Sheet_34: 521506869977668482
+      murte_murcielago_sangre-Sheet_35: 1211892715266306005
+      murte_murcielago_sangre-Sheet_36: 5787923974558669072
+      murte_murcielago_sangre-Sheet_4: -8158074871468663440
+      murte_murcielago_sangre-Sheet_5: 2453275391562675145
+      murte_murcielago_sangre-Sheet_6: -2837634310345781989
+      murte_murcielago_sangre-Sheet_7: -2449170849482244556
+      murte_murcielago_sangre-Sheet_8: -7293979273329035105
+      murte_murcielago_sangre-Sheet_9: 3165687598648030466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
