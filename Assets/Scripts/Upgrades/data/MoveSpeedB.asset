@@ -15,4 +15,5 @@ MonoBehaviour:
   upgradeName: BoostSpeed
   description: "+1 a la velocidad m\xE1xima"
   icon: {fileID: -4012736614915743382, guid: 91f7a5ca34a663f449d95afdc1bd28bf, type: 3}
+  rarity: 1
   speedBonus: 1

@@ -34,6 +34,16 @@ public class UpgradeUI : MonoBehaviour
             var descText = go.transform.Find("DescriptionText")?.GetComponent<TextMeshProUGUI>();
             var iconImage = go.transform.Find("Image")?.GetComponent<Image>();
             var buyButton = go.transform.Find("BuyButton")?.GetComponent<Button>();
+            var rarityFrame = go.transform.Find("RarityFrame")?.GetComponent<Image>();
+            if (rarityFrame != null)
+            {
+                // color por rareza
+                var color = RarityUtil.GetColor(upgrade.rarity);
+                // mantener la transparencia del overlay (por si quieres un alpha suave)
+                color.a = 1f; // o 0.8f si quieres un poco más suave
+                rarityFrame.color = color;
+            }
+
 
             if (nameText == null || descText == null || iconImage == null || buyButton == null)
             {

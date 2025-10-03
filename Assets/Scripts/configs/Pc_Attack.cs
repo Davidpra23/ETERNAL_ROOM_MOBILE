@@ -1,48 +1,80 @@
-// Pc_Attack.cs (Modificado)
+// Pc_Attack.cs (Hold-to-charge compatible)
 using UnityEngine;
 
 public class Pc_Attack : MonoBehaviour
 {
     [Header("Configuración de Input")]
+    [SerializeField] private bool useKey = true;
     [SerializeField] private KeyCode attackKey = KeyCode.J;
+
     [SerializeField] private bool useMouseClick = true;
+    [Tooltip("0 = Click izquierdo, 1 = Derecho, 2 = Medio")]
     [SerializeField] private int mouseButton = 0;
-    
+
     [Header("Opciones")]
     [SerializeField] private bool showDebug = true;
+    [Tooltip("Cancelar la carga si este objeto se desactiva o pierde el foco?")]
+    [SerializeField] private bool cancelOnDisable = true;
 
-    // No necesitamos más la referencia a SwordDamageSystem aquí.
+    private bool holding = false;
 
-    void Update()
+    private void Update()
     {
-        if (ShouldAttack())
+        // --- START HOLD ---
+        if (!holding && (KeyDown() || MouseDown()))
         {
-            Attack();
-        }
-    }
-
-    private bool ShouldAttack()
-    {
-        bool keyInput = Input.GetKeyDown(attackKey);
-        bool mouseInput = useMouseClick && Input.GetMouseButtonDown(mouseButton);
-        return keyInput || mouseInput;
-    }
-
-    private void Attack()
-    {
-        // En lugar de llamar directamente a la espada, le pedimos al manager que lo haga.
-        if (EquipmentManager.Instance != null)
-        {
-            EquipmentManager.Instance.TriggerAttack();
-            
-            if (showDebug)
+            if (EquipmentManager.Instance != null)
             {
-                Debug.Log("Señal de ataque enviada al EquipmentManager.");
+                EquipmentManager.Instance.StartAttackHold();
+                holding = true;
+
+                if (showDebug) Debug.Log("[Pc_Attack] Hold START");
+            }
+            else if (showDebug)
+            {
+                Debug.LogWarning("[Pc_Attack] EquipmentManager no encontrado.");
             }
         }
-        else if (showDebug)
+
+        // --- RELEASE HOLD ---
+        if (holding && (KeyUp() || MouseUp()))
         {
-            Debug.LogWarning("EquipmentManager no encontrado en la escena.");
+            if (EquipmentManager.Instance != null)
+            {
+                EquipmentManager.Instance.ReleaseAttackHold();
+                if (showDebug) Debug.Log("[Pc_Attack] Hold RELEASE");
+            }
+            holding = false;
         }
+
+        // (Opcional) si quieres permitir cancelar con tecla ESC:
+        // if (holding && Input.GetKeyDown(KeyCode.Escape)) CancelHold();
+    }
+
+    private bool KeyDown() => useKey && Input.GetKeyDown(attackKey);
+    private bool KeyUp()   => useKey && Input.GetKeyUp(attackKey);
+
+    private bool MouseDown() => useMouseClick && Input.GetMouseButtonDown(mouseButton);
+    private bool MouseUp()   => useMouseClick && Input.GetMouseButtonUp(mouseButton);
+
+    private void CancelHold()
+    {
+        if (!holding) return;
+        if (EquipmentManager.Instance != null)
+        {
+            EquipmentManager.Instance.CancelAttackHold();
+            if (showDebug) Debug.Log("[Pc_Attack] Hold CANCEL");
+        }
+        holding = false;
+    }
+
+    private void OnDisable()
+    {
+        if (cancelOnDisable) CancelHold();
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus && cancelOnDisable) CancelHold();
     }
 }

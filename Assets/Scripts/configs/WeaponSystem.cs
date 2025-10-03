@@ -1,10 +1,15 @@
-// WeaponSystem.cs
 using UnityEngine;
 
 public abstract class WeaponSystem : MonoBehaviour
 {
-    // Todas las armas DEBEN tener un método TryAttack().
-    // 'abstract' significa que la clase base no define cómo funciona,
-    // cada arma creará su propia implementación.
-    public abstract void TryAttack();
+    // Soporte legacy (clic único)
+    public virtual void TryAttack() {}
+
+    // Nuevo: ciclo de carga
+    public virtual void OnAttackHoldStart() {}
+    public virtual void OnAttackHoldRelease() {}
+    public virtual void OnAttackHoldCancel() {}
+
+    // Info opcional
+    public virtual bool IsCharging => false;
 }

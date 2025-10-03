@@ -9,6 +9,7 @@ public class WaveManager : MonoBehaviour
 {
     [SerializeField] private UpgradeManager upgradeManager;
     public static WaveManager Instance { get; private set; }
+    public int GetCurrentWave() => currentWave;
 
     [Header("Configuración General")]
     [SerializeField] private EnemyConfiguration enemyConfiguration;

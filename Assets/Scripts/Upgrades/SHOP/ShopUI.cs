@@ -35,6 +35,14 @@ public class ShopUI : MonoBehaviour
             var priceText = go.transform.Find("PriceText")?.GetComponent<TextMeshProUGUI>();
             var iconImage = go.transform.Find("Icon")?.GetComponent<Image>();
             var buyButton = go.transform.Find("BuyButton")?.GetComponent<Button>();
+            var rarityFrame = go.transform.Find("RarityFrame")?.GetComponent<Image>();
+            if (rarityFrame != null)
+            {
+                var color = RarityUtil.GetColor(item.rarity);
+                color.a = 1f; // ajusta alpha si quieres
+                rarityFrame.color = color;
+            }
+
 
             if (!nameText || !descText || !priceText || !iconImage || !buyButton)
             {

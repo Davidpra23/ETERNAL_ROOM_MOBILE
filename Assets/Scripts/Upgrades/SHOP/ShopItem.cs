@@ -7,9 +7,8 @@ public abstract class ShopItem : ScriptableObject
     public Sprite icon;
     public int cost;
 
-    /// <summary>
-    /// Aplica el efecto de la compra al player.
-    /// Retorna true si se aplicó con éxito.
-    /// </summary>
+    [Header("Rarity")]
+    public Rarity rarity = Rarity.Common;
+
     public abstract bool ApplyTo(GameObject player);
 }

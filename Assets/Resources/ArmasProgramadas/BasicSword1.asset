@@ -17,6 +17,7 @@ MonoBehaviour:
     0.5s\r\n<color=#1E90FF>Rango:</color> 1.5"
   icon: {fileID: 7859929478225895348, guid: efbceb37cdebbdc409f9b8bb4fe383ce, type: 3}
   cost: 50
+  rarity: 1
   weaponPrefab: {fileID: 8852123001547713326, guid: ce0696d8338a77349b494c34ef2ece10, type: 3}
   damageBonus: 0
   attackSpeedBonus: 0

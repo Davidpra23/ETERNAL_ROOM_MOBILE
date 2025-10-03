@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,42 +8,39 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private List<ShopItem> allShopItems;
     [SerializeField] private int itemsPerVisit = 3;
     [SerializeField] private bool closeAfterFirstPurchase = true;
+    [SerializeField] private RarityTable rarityTable; // ASIGNA
 
     private GameObject player;
 
-    private void Start() // <- mejor Start que Awake para referencias de escena
+    private void Awake()
     {
-        if (!Application.isPlaying) return;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void ShowShop()
     {
-        if (!Application.isPlaying) return; // <- clave: no abrir tienda en editor
-
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
         if (shopUI == null) { Debug.LogError("[ShopManager] Falta ShopUI"); return; }
 
-        var selection = allShopItems
-            .Where(i => i != null)
-            .OrderBy(_ => Random.value)
-            .Take(itemsPerVisit)
-            .ToList();
+        int wave = WaveManager.Instance != null ? WaveManager.Instance.GetCurrentWave() : 1;
+        var weights = rarityTable != null
+            ? rarityTable.GetWeights(wave)
+            : new Dictionary<Rarity, float> // fallback simple
+            {
+                { Rarity.Common, 0.7f },
+                { Rarity.Rare, 0.2f },
+                { Rarity.Epic, 0.09f },
+                { Rarity.Legendary, 0.01f }
+            };
 
-        // Difíerelo un frame: evita choques con carga/inspector/TMP
-        StartCoroutine(ShowDeferred(selection));
-    }
+        var pool = allShopItems?.Where(i => i != null).ToList() ?? new List<ShopItem>();
+        var selection = WeightedPicker.PickManyDistinct(pool, itemsPerVisit, i => i.rarity, weights);
 
-    private IEnumerator ShowDeferred(List<ShopItem> selection)
-    {
-        yield return null; // espera un frame para asegurar main thread/UI ok
         shopUI.Show(selection, OnBuyItem, OnShopClosed);
     }
 
     private void OnBuyItem(ShopItem item)
     {
-        if (!Application.isPlaying) return;
-
         if (item == null || player == null) return;
         if (ScoreManager.Instance == null) return;
 
@@ -61,13 +57,12 @@ public class ShopManager : MonoBehaviour
 
         if (closeAfterFirstPurchase)
         {
-            shopUI.Close(); // disparará OnShopClosed
+            shopUI.Close();
         }
     }
 
     private void OnShopClosed()
     {
-        if (!Application.isPlaying) return;
         WaveManager.Instance?.PrepareNextWave();
     }
 }
