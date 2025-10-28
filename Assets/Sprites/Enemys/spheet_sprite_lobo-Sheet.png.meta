@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 5853653add5247f438c6c231dc5423da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2350073761425398620
+    second: spheet_sprite_lobo-Sheet_0
+  - first:
+      213: 7130021646934313247
+    second: spheet_sprite_lobo-Sheet_1
+  - first:
+      213: -9104353570341607458
+    second: spheet_sprite_lobo-Sheet_2
+  - first:
+      213: -2900410292664754891
+    second: spheet_sprite_lobo-Sheet_3
+  - first:
+      213: -7478374064513193209
+    second: spheet_sprite_lobo-Sheet_4
+  - first:
+      213: 2958845506720289102
+    second: spheet_sprite_lobo-Sheet_5
+  - first:
+      213: 2557055753682734171
+    second: spheet_sprite_lobo-Sheet_6
+  - first:
+      213: 7133104647234704817
+    second: spheet_sprite_lobo-Sheet_7
+  - first:
+      213: -9053118342191100695
+    second: spheet_sprite_lobo-Sheet_8
+  - first:
+      213: 4060406712698282566
+    second: spheet_sprite_lobo-Sheet_9
+  - first:
+      213: -831706540701564048
+    second: spheet_sprite_lobo-Sheet_10
+  - first:
+      213: -5672579296094567131
+    second: spheet_sprite_lobo-Sheet_11
+  - first:
+      213: 3662230952795929351
+    second: spheet_sprite_lobo-Sheet_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 995
+        width: 154
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b1ab182a32d9020800000000000000
+      internalID: 2350073761425398620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 995
+        width: 156
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f198d5259ece2f260800000000000000
+      internalID: 7130021646934313247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 995
+        width: 156
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7aa3a2aa6d6a180800000000000000
+      internalID: -9104353570341607458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 995
+        width: 156
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d94d2b43cafb7d0800000000000000
+      internalID: -2900410292664754891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 995
+        width: 154
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b6233196a773890800000000000000
+      internalID: -7478374064513193209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 724
+        width: 174
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41d25dcf4eef0920800000000000000
+      internalID: 2958845506720289102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 726
+        width: 167
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cc02df8ac7c7320800000000000000
+      internalID: 2557055753682734171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 728
+        width: 167
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5dc1442e0edf260800000000000000
+      internalID: 7133104647234704817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 730
+        width: 167
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec402055dcdc5280800000000000000
+      internalID: -9053118342191100695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 535
+        width: 188
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6422ef96466795830800000000000000
+      internalID: 4060406712698282566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 531
+        width: 214
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0734d1cce4f2574f0800000000000000
+      internalID: -831706540701564048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 516
+        width: 246
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5254c005f23f641b0800000000000000
+      internalID: -5672579296094567131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spheet_sprite_lobo-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 537
+        width: 220
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b77d2f5abd2d230800000000000000
+      internalID: 3662230952795929351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
