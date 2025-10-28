@@ -1,0 +1,2242 @@
+fileFormatVersion: 2
+guid: a0e1630ac3e6fd24d9280ac9fe132bb5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6064619007638140369
+    second: Boss - Skeleton_0
+  - first:
+      213: -3087794082484703473
+    second: Boss - Skeleton_1
+  - first:
+      213: -7709668025214485367
+    second: Boss - Skeleton_2
+  - first:
+      213: 483416698645977670
+    second: Boss - Skeleton_3
+  - first:
+      213: -4379458437589295573
+    second: Boss - Skeleton_4
+  - first:
+      213: 2332956782143957638
+    second: Boss - Skeleton_5
+  - first:
+      213: -7792913001268889844
+    second: Boss - Skeleton_6
+  - first:
+      213: 3563260525457449097
+    second: Boss - Skeleton_7
+  - first:
+      213: -7811920280577954033
+    second: Boss - Skeleton_8
+  - first:
+      213: -7277801407670804104
+    second: Boss - Skeleton_9
+  - first:
+      213: -4333522913643228342
+    second: Boss - Skeleton_10
+  - first:
+      213: -7092289647650621580
+    second: Boss - Skeleton_11
+  - first:
+      213: 261604717283373881
+    second: Boss - Skeleton_12
+  - first:
+      213: 7841948156050901924
+    second: Boss - Skeleton_13
+  - first:
+      213: 7741318343048597131
+    second: Boss - Skeleton_14
+  - first:
+      213: 4071714227315473370
+    second: Boss - Skeleton_15
+  - first:
+      213: 7634911914664937572
+    second: Boss - Skeleton_16
+  - first:
+      213: -7683823154745268176
+    second: Boss - Skeleton_17
+  - first:
+      213: -549803155009190090
+    second: Boss - Skeleton_18
+  - first:
+      213: 2051955366187827227
+    second: Boss - Skeleton_19
+  - first:
+      213: -391037531039402108
+    second: Boss - Skeleton_20
+  - first:
+      213: -6655130016263172149
+    second: Boss - Skeleton_21
+  - first:
+      213: 2265304786683867137
+    second: Boss - Skeleton_22
+  - first:
+      213: 5881173498776264093
+    second: Boss - Skeleton_23
+  - first:
+      213: -4169765556310826282
+    second: Boss - Skeleton_24
+  - first:
+      213: -6437268169582728422
+    second: Boss - Skeleton_25
+  - first:
+      213: -3907739302669919883
+    second: Boss - Skeleton_26
+  - first:
+      213: 1933091823149765321
+    second: Boss - Skeleton_27
+  - first:
+      213: 8940352990605305270
+    second: Boss - Skeleton_28
+  - first:
+      213: -3033637674656172166
+    second: Boss - Skeleton_29
+  - first:
+      213: 8023753193332403542
+    second: Boss - Skeleton_30
+  - first:
+      213: -6063214878649794691
+    second: Boss - Skeleton_31
+  - first:
+      213: -8330884260317902733
+    second: Boss - Skeleton_32
+  - first:
+      213: 2723455376779957214
+    second: Boss - Skeleton_33
+  - first:
+      213: -7853541674598058705
+    second: Boss - Skeleton_34
+  - first:
+      213: -6434277724542767619
+    second: Boss - Skeleton_35
+  - first:
+      213: -3651411374008124335
+    second: Boss - Skeleton_36
+  - first:
+      213: -7242462889557690609
+    second: Boss - Skeleton_37
+  - first:
+      213: 7439134348011607468
+    second: Boss - Skeleton_38
+  - first:
+      213: 7965641821834596535
+    second: Boss - Skeleton_39
+  - first:
+      213: 9099852242896478285
+    second: Boss - Skeleton_40
+  - first:
+      213: 4372484164835521349
+    second: Boss - Skeleton_41
+  - first:
+      213: -6100760996344124093
+    second: Boss - Skeleton_42
+  - first:
+      213: 5396416081573036531
+    second: Boss - Skeleton_43
+  - first:
+      213: -3779380223084414100
+    second: Boss - Skeleton_44
+  - first:
+      213: -2659014902245639712
+    second: Boss - Skeleton_45
+  - first:
+      213: 7156651148761825374
+    second: Boss - Skeleton_46
+  - first:
+      213: 5572803014458861798
+    second: Boss - Skeleton_47
+  - first:
+      213: 5054122576797727270
+    second: Boss - Skeleton_48
+  - first:
+      213: -4127528089956315178
+    second: Boss - Skeleton_49
+  - first:
+      213: -8247341908934989606
+    second: Boss - Skeleton_50
+  - first:
+      213: -6013151335011377997
+    second: Boss - Skeleton_51
+  - first:
+      213: 2874469193050335295
+    second: Boss - Skeleton_52
+  - first:
+      213: -6946237805303355151
+    second: Boss - Skeleton_53
+  - first:
+      213: 6470394025449956450
+    second: Boss - Skeleton_54
+  - first:
+      213: -3394770019994024573
+    second: Boss - Skeleton_55
+  - first:
+      213: 2219955748370784331
+    second: Boss - Skeleton_56
+  - first:
+      213: 3191266364248179788
+    second: Boss - Skeleton_57
+  - first:
+      213: 8123795664002650372
+    second: Boss - Skeleton_58
+  - first:
+      213: -5264391303048190205
+    second: Boss - Skeleton_59
+  - first:
+      213: 4449191434248661513
+    second: Boss - Skeleton_60
+  - first:
+      213: -7312448384982071951
+    second: Boss - Skeleton_61
+  - first:
+      213: -7452036960894730897
+    second: Boss - Skeleton_62
+  - first:
+      213: -1220224016062793993
+    second: Boss - Skeleton_63
+  - first:
+      213: -6477880916622467915
+    second: Boss - Skeleton_64
+  - first:
+      213: 6215182192603424765
+    second: Boss - Skeleton_65
+  - first:
+      213: 1200291367678037615
+    second: Boss - Skeleton_66
+  - first:
+      213: -7420150996393555786
+    second: Boss - Skeleton_67
+  - first:
+      213: -5778293420907199856
+    second: Boss - Skeleton_68
+  - first:
+      213: -3164188693339368606
+    second: Boss - Skeleton_69
+  - first:
+      213: 7990475762687636370
+    second: Boss - Skeleton_70
+  - first:
+      213: 6056739032794276897
+    second: Boss - Skeleton_71
+  - first:
+      213: 8677000743486919206
+    second: Boss - Skeleton_72
+  - first:
+      213: 2013600264201510928
+    second: Boss - Skeleton_73
+  - first:
+      213: -5027967360989390700
+    second: Boss - Skeleton_74
+  - first:
+      213: 9041015917496949369
+    second: Boss - Skeleton_75
+  - first:
+      213: -8767524514301520068
+    second: Boss - Skeleton_76
+  - first:
+      213: -8678980658668345947
+    second: Boss - Skeleton_77
+  - first:
+      213: 2844015474903457892
+    second: Boss - Skeleton_78
+  - first:
+      213: 7805743017674120281
+    second: Boss - Skeleton_79
+  - first:
+      213: 3280388530052453859
+    second: Boss - Skeleton_80
+  - first:
+      213: 7613782087368156002
+    second: Boss - Skeleton_81
+  - first:
+      213: -2466015765882375798
+    second: Boss - Skeleton_82
+  - first:
+      213: 3323847043471905357
+    second: Boss - Skeleton_83
+  - first:
+      213: -2009727191218261783
+    second: Boss - Skeleton_84
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss - Skeleton_0
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 412
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d57a501bdad92450800000000000000
+      internalID: 6064619007638140369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 412
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f22fd44a3f525d0800000000000000
+      internalID: -3087794082484703473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 459
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c37e457c1c10590800000000000000
+      internalID: -7709668025214485367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_3
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 459
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a19491de075b600800000000000000
+      internalID: 483416698645977670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 459
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e17ee11c90933c0800000000000000
+      internalID: -4379458437589295573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 459
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a670435d3506020800000000000000
+      internalID: 2332956782143957638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_6
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 459
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0738d9f9e20ad390800000000000000
+      internalID: -7792913001268889844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_7
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 459
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9802016a19e337130800000000000000
+      internalID: 3563260525457449097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_8
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 459
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f2b76e4eb769390800000000000000
+      internalID: -7811920280577954033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 459
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871a1fddd2e000b90800000000000000
+      internalID: -7277801407670804104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_10
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 459
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43974abedb3cd3c0800000000000000
+      internalID: -4333522913643228342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_11
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 459
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477ba9b5420239d90800000000000000
+      internalID: -7092289647650621580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_12
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 457
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933fd35ba1861a300800000000000000
+      internalID: 261604717283373881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_13
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 408
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab817cac4234dc60800000000000000
+      internalID: 7841948156050901924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_14
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 408
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e80aa8400be6b60800000000000000
+      internalID: 7741318343048597131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_15
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 437
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbfa025482a18830800000000000000
+      internalID: 4071714227315473370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 437
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46840055fe7a4f960800000000000000
+      internalID: 7634911914664937572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_17
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 437
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038ac782d839d5590800000000000000
+      internalID: -7683823154745268176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_18
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 437
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637c94981f4be58f0800000000000000
+      internalID: -549803155009190090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_19
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 437
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b100598a8820a7c10800000000000000
+      internalID: 2051955366187827227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_20
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 437
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487fc84ff61c29af0800000000000000
+      internalID: -391037531039402108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_21
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 437
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf0896b28a34a3a0800000000000000
+      internalID: -6655130016263172149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_22
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 437
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 100b84e83baff6f10800000000000000
+      internalID: 2265304786683867137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 437
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d100923202e9150800000000000000
+      internalID: 5881173498776264093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_24
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 437
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d22f63a1540226c0800000000000000
+      internalID: -4169765556310826282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_25
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 437
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ba714b4ba3aa6a0800000000000000
+      internalID: -6437268169582728422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_26
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 408
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579d68deecbe4c9c0800000000000000
+      internalID: -3907739302669919883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 415
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2dd0d65c8b3da10800000000000000
+      internalID: 1933091823149765321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_28
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 426
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b561ab4da3821c70800000000000000
+      internalID: 8940352990605305270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_29
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 424
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7770e89b9a56e5d0800000000000000
+      internalID: -3033637674656172166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_30
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 424
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65debf584091a5f60800000000000000
+      internalID: 8023753193332403542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_31
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 426
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f373131322bdba0800000000000000
+      internalID: -6063214878649794691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_32
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 426
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378cbd677e0c26c80800000000000000
+      internalID: -8330884260317902733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_33
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 424
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3d8965c38abc520800000000000000
+      internalID: 2723455376779957214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_34
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 424
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f253bd0f47d920390800000000000000
+      internalID: -7853541674598058705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_35
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 426
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd6b62ff7ad4b6a0800000000000000
+      internalID: -6434277724542767619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_36
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 424
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cbc6b83b4935dc0800000000000000
+      internalID: -3651411374008124335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_37
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 426
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07f6f8cf5a9d7b90800000000000000
+      internalID: -7242462889557690609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_38
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 426
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca593a9764d1d3760800000000000000
+      internalID: 7439134348011607468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_39
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 409
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0527e7805ab8e60800000000000000
+      internalID: 7965641821834596535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_40
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 392
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40e26ed66b294e70800000000000000
+      internalID: 9099852242896478285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_41
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 409
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543ba077e2f2eac30800000000000000
+      internalID: 4372484164835521349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_42
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 407
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34da951723eb55ba0800000000000000
+      internalID: -6100760996344124093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_43
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 322
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1cd52b5dbe3ea40800000000000000
+      internalID: 5396416081573036531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_44
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 319
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bbaeb06b1fc8bc0800000000000000
+      internalID: -3779380223084414100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_45
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 318
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9bd23d808491bd0800000000000000
+      internalID: -2659014902245639712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_46
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 316
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50075f5d48815360800000000000000
+      internalID: 7156651148761825374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_47
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 323
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8eb00d0d2965d40800000000000000
+      internalID: 5572803014458861798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_48
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 321
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a7f49a4b9d32640800000000000000
+      internalID: 5054122576797727270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_49
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 318
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df05bd121318b6c0800000000000000
+      internalID: -4127528089956315178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_50
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 322
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8ecb8ea3e8b8d80800000000000000
+      internalID: -8247341908934989606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_51
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 239
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc1bf748befc8ca0800000000000000
+      internalID: -6013151335011377997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 251
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38a191608a24e720800000000000000
+      internalID: 2874469193050335295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_53
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 244
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f82181d4810a9f90800000000000000
+      internalID: -6946237805303355151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_54
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 242
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26421c3a5157bc950800000000000000
+      internalID: 6470394025449956450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_55
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 243
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3854c1037aa53e0d0800000000000000
+      internalID: -3394770019994024573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_56
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 244
+        width: 70
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b402ab6cdfddece10800000000000000
+      internalID: 2219955748370784331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_57
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 244
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c444aa8a9d7a94c20800000000000000
+      internalID: 3191266364248179788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_58
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 152
+        width: 38
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4019cbc5d158db070800000000000000
+      internalID: 8123795664002650372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_59
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 155
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3072827700021f6b0800000000000000
+      internalID: -5264391303048190205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_60
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 157
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a2a106904bebd30800000000000000
+      internalID: 4449191434248661513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_61
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 160
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175c3c6dfe6f48a90800000000000000
+      internalID: -7312448384982071951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_62
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 151
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6db9ccdddb059890800000000000000
+      internalID: -7452036960894730897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_63
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 153
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f63d20f8b4e01fe0800000000000000
+      internalID: -1220224016062793993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_64
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 155
+        width: 60
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc9f6ba0a1f916a0800000000000000
+      internalID: -6477880916622467915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_65
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7e5745643c04650800000000000000
+      internalID: 6215182192603424765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_66
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 79
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6eca65b3aa48a010800000000000000
+      internalID: 1200291367678037615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_67
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 82
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b883308bf3560990800000000000000
+      internalID: -7420150996393555786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_68
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 88
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09289d69fb06fcfa0800000000000000
+      internalID: -5778293420907199856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2631333e52b8614d0800000000000000
+      internalID: -3164188693339368606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_70
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 79
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2937d5dee5fd3ee60800000000000000
+      internalID: 7990475762687636370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_71
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 77
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12422f27f0cdd0450800000000000000
+      internalID: 6056739032794276897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_72
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 87
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62296571436ea6870800000000000000
+      internalID: 8677000743486919206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_73
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 79
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0102d5395ceb1fb10800000000000000
+      internalID: 2013600264201510928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_74
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49818f11352193ab0800000000000000
+      internalID: -5027967360989390700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_75
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 4
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ade0b5314287d70800000000000000
+      internalID: 9041015917496949369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_76
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37578518ee735680800000000000000
+      internalID: -8767524514301520068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_77
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 16
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5669bf2111e8780800000000000000
+      internalID: -8678980658668345947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_78
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 33
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460a5559109f77720800000000000000
+      internalID: 2844015474903457892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_79
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 18
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c93700be1935c60800000000000000
+      internalID: 7805743017674120281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_80
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 15
+        width: 54
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5da03ecf7468d20800000000000000
+      internalID: 3280388530052453859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_81
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 31
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263afca087699a960800000000000000
+      internalID: 7613782087368156002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_82
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 35
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a817118f9b3f6cdd0800000000000000
+      internalID: -2466015765882375798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_83
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 19
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4210e9864da02e20800000000000000
+      internalID: 3323847043471905357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss - Skeleton_84
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 24
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0fdff74c30c14e0800000000000000
+      internalID: -2009727191218261783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
