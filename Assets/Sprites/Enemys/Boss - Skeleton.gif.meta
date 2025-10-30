@@ -348,6 +348,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2234,7 +2247,92 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss - Skeleton_0: 6064619007638140369
+      Boss - Skeleton_1: -3087794082484703473
+      Boss - Skeleton_10: -4333522913643228342
+      Boss - Skeleton_11: -7092289647650621580
+      Boss - Skeleton_12: 261604717283373881
+      Boss - Skeleton_13: 7841948156050901924
+      Boss - Skeleton_14: 7741318343048597131
+      Boss - Skeleton_15: 4071714227315473370
+      Boss - Skeleton_16: 7634911914664937572
+      Boss - Skeleton_17: -7683823154745268176
+      Boss - Skeleton_18: -549803155009190090
+      Boss - Skeleton_19: 2051955366187827227
+      Boss - Skeleton_2: -7709668025214485367
+      Boss - Skeleton_20: -391037531039402108
+      Boss - Skeleton_21: -6655130016263172149
+      Boss - Skeleton_22: 2265304786683867137
+      Boss - Skeleton_23: 5881173498776264093
+      Boss - Skeleton_24: -4169765556310826282
+      Boss - Skeleton_25: -6437268169582728422
+      Boss - Skeleton_26: -3907739302669919883
+      Boss - Skeleton_27: 1933091823149765321
+      Boss - Skeleton_28: 8940352990605305270
+      Boss - Skeleton_29: -3033637674656172166
+      Boss - Skeleton_3: 483416698645977670
+      Boss - Skeleton_30: 8023753193332403542
+      Boss - Skeleton_31: -6063214878649794691
+      Boss - Skeleton_32: -8330884260317902733
+      Boss - Skeleton_33: 2723455376779957214
+      Boss - Skeleton_34: -7853541674598058705
+      Boss - Skeleton_35: -6434277724542767619
+      Boss - Skeleton_36: -3651411374008124335
+      Boss - Skeleton_37: -7242462889557690609
+      Boss - Skeleton_38: 7439134348011607468
+      Boss - Skeleton_39: 7965641821834596535
+      Boss - Skeleton_4: -4379458437589295573
+      Boss - Skeleton_40: 9099852242896478285
+      Boss - Skeleton_41: 4372484164835521349
+      Boss - Skeleton_42: -6100760996344124093
+      Boss - Skeleton_43: 5396416081573036531
+      Boss - Skeleton_44: -3779380223084414100
+      Boss - Skeleton_45: -2659014902245639712
+      Boss - Skeleton_46: 7156651148761825374
+      Boss - Skeleton_47: 5572803014458861798
+      Boss - Skeleton_48: 5054122576797727270
+      Boss - Skeleton_49: -4127528089956315178
+      Boss - Skeleton_5: 2332956782143957638
+      Boss - Skeleton_50: -8247341908934989606
+      Boss - Skeleton_51: -6013151335011377997
+      Boss - Skeleton_52: 2874469193050335295
+      Boss - Skeleton_53: -6946237805303355151
+      Boss - Skeleton_54: 6470394025449956450
+      Boss - Skeleton_55: -3394770019994024573
+      Boss - Skeleton_56: 2219955748370784331
+      Boss - Skeleton_57: 3191266364248179788
+      Boss - Skeleton_58: 8123795664002650372
+      Boss - Skeleton_59: -5264391303048190205
+      Boss - Skeleton_6: -7792913001268889844
+      Boss - Skeleton_60: 4449191434248661513
+      Boss - Skeleton_61: -7312448384982071951
+      Boss - Skeleton_62: -7452036960894730897
+      Boss - Skeleton_63: -1220224016062793993
+      Boss - Skeleton_64: -6477880916622467915
+      Boss - Skeleton_65: 6215182192603424765
+      Boss - Skeleton_66: 1200291367678037615
+      Boss - Skeleton_67: -7420150996393555786
+      Boss - Skeleton_68: -5778293420907199856
+      Boss - Skeleton_69: -3164188693339368606
+      Boss - Skeleton_7: 3563260525457449097
+      Boss - Skeleton_70: 7990475762687636370
+      Boss - Skeleton_71: 6056739032794276897
+      Boss - Skeleton_72: 8677000743486919206
+      Boss - Skeleton_73: 2013600264201510928
+      Boss - Skeleton_74: -5027967360989390700
+      Boss - Skeleton_75: 9041015917496949369
+      Boss - Skeleton_76: -8767524514301520068
+      Boss - Skeleton_77: -8678980658668345947
+      Boss - Skeleton_78: 2844015474903457892
+      Boss - Skeleton_79: 7805743017674120281
+      Boss - Skeleton_8: -7811920280577954033
+      Boss - Skeleton_80: 3280388530052453859
+      Boss - Skeleton_81: 7613782087368156002
+      Boss - Skeleton_82: -2466015765882375798
+      Boss - Skeleton_83: 3323847043471905357
+      Boss - Skeleton_84: -2009727191218261783
+      Boss - Skeleton_9: -7277801407670804104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

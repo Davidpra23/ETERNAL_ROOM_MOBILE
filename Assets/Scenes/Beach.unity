@@ -733,9 +733,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 209195823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e85042af84a11446a3e825b805c0dc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e27862498af93842a68d6041587c363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeManager: {fileID: 0}
+  enemyConfiguration: {fileID: 0}
+  totalWaves: 20
+  waveDuration: 60
+  spawnAreaCorner1: {fileID: 0}
+  spawnAreaCorner2: {fileID: 0}
+  groupSpawnRadius: 3
+  maxActiveEnemies: 25
+  maxTotalEnemiesPerWave: 80
+  waveText: {fileID: 0}
+  timerText: {fileID: 0}
+  startWaveButton: {fileID: 0}
+  waveTextFormat: 'Wave: {0}/{1}'
+  timerTextFormat: 'Time: {0}s'
+  bossPrefab: {fileID: 0}
+  fullHealOnNewWave: 1
 --- !u!1 &245569752
 GameObject:
   m_ObjectHideFlags: 0
