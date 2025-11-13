@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8920ddb855132c841976949fe9292cd2
+guid: 1d0bb8fb2043bb44b93f80728ae2b01b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1184346417512525441
-    second: arco-basico1_0
+      213: -6344036765099105447
+    second: fondomenu2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arco-basico1_0
+      name: fondomenu2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 4
+        y: 29
+        width: 185
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18e27d2bac4af6010800000000000000
-      internalID: 1184346417512525441
+      spriteID: 953ef3e9c2475f7a0800000000000000
+      internalID: -6344036765099105447
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      arco-basico1_0: 1184346417512525441
+      fondomenu2_0: -6344036765099105447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
