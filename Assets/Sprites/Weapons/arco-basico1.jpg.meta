@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arco-basico1_0: 1184346417512525441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

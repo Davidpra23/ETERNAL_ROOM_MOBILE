@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3614453729784029639}
   - component: {fileID: 6641666087848420691}
   - component: {fileID: 5787481453352207011}
-  - component: {fileID: 7534791395741206694}
   - component: {fileID: 3262208189596291905}
   - component: {fileID: 7717147995726242506}
   - component: {fileID: 300789440588910200}
@@ -117,24 +116,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7534791395741206694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6078335227657329981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abea6b1d37097304c9d5e68b54171c43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 2
-  movementDistance: 0.1
-  startMovingUp: 1
-  useLocalSpace: 1
-  smoothMovement: 1
-  smoothFactor: 2
 --- !u!114 &3262208189596291905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 5
   pickupEffectPrefab: {fileID: 8862022057106257862, guid: fc202103e9f5c0740bece2671b42d407, type: 3}
+  attractionRange: 2.5
+  attractionSpeed: 6
 --- !u!70 &7717147995726242506
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

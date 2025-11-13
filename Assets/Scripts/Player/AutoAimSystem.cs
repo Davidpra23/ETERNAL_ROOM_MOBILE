@@ -75,16 +75,16 @@ public class AutoAimSystem : MonoBehaviour
         foreach (Collider2D enemy in nearbyEnemies)
         {
             if (enemy == null) continue;
-            
-            // Verificar si es un enemigo válido
-            if (enemy.GetComponent<EnemyHealth>() != null)
+
+            // Buscar IHealth (soporta EnemyHealth y BossHealth)
+            if (enemy.TryGetComponent<IHealth>(out var health) && !health.IsDead)
             {
                 Vector2 toEnemy = (enemy.transform.position - transform.position).normalized;
                 float distance = Vector2.Distance(transform.position, enemy.transform.position);
                 float distanceScore = 1f / (distance + 0.1f);
                 float alignmentScore = Vector2.Dot(toEnemy, movementDirection) * 0.5f;
                 float totalScore = distanceScore + alignmentScore;
-                
+
                 if (totalScore > bestScore)
                 {
                     bestScore = totalScore;

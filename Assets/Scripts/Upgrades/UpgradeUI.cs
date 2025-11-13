@@ -12,13 +12,18 @@ public class UpgradeUI : MonoBehaviour
 
     private Action<Upgrade> onUpgradeSelected;
 
+    public void Close()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void Show(List<Upgrade> upgrades, Action<Upgrade> onSelected)
     {
         onUpgradeSelected = onSelected;
         panel.SetActive(true);
 
-        // (Opcional) si pausas el juego al abrir upgrades, hazlo aquí:
-        // Time.timeScale = 0f;
+        // ✅ Pausar el juego mientras se elige una mejora
+        Time.timeScale = 0f;
 
         // Limpiar anteriores
         foreach (Transform child in container)
@@ -35,15 +40,13 @@ public class UpgradeUI : MonoBehaviour
             var iconImage = go.transform.Find("Image")?.GetComponent<Image>();
             var buyButton = go.transform.Find("BuyButton")?.GetComponent<Button>();
             var rarityFrame = go.transform.Find("RarityFrame")?.GetComponent<Image>();
+
             if (rarityFrame != null)
             {
-                // color por rareza
                 var color = RarityUtil.GetColor(upgrade.rarity);
-                // mantener la transparencia del overlay (por si quieres un alpha suave)
-                color.a = 1f; // o 0.8f si quieres un poco más suave
+                color.a = 1f;
                 rarityFrame.color = color;
             }
-
 
             if (nameText == null || descText == null || iconImage == null || buyButton == null)
             {
@@ -58,34 +61,37 @@ public class UpgradeUI : MonoBehaviour
             buyButton.onClick.RemoveAllListeners();
             buyButton.onClick.AddListener(() =>
             {
-                // 1) Aplica la mejora
+                // ✅ Aplica mejora
                 onUpgradeSelected?.Invoke(upgrade);
 
-                // 2) Oculta el panel y limpia
+                // ✅ Limpia y cierra panel
                 HideAndClear();
+                Time.timeScale = 1f; // reanuda el juego
 
-                // Mostrar tienda
+                // ✅ Verificar si se debe mostrar tienda
                 var shop = FindObjectOfType<ShopManager>();
-                if (shop != null)
+                if (shop != null && shop.ShouldShowShopThisWave())
                 {
-                    shop.ShowShop(); // La tienda, al cerrarse, llamará a WaveManager.Instance.PrepareNextWave()
+                    Debug.Log($"[UpgradeUI] Mostrando tienda después de oleada {WaveManager.Instance.GetCurrentWave()}");
+                    shop.ShowShop();
                 }
                 else
                 {
-                    // Fallback si no hay ShopManager en escena:
-                    WaveManager.Instance?.PrepareNextWave();
+                    Debug.Log($"[UpgradeUI] No hay tienda en oleada {WaveManager.Instance.GetCurrentWave()}, iniciando siguiente.");
+                    WaveManager.Instance?.StartNextWave();
                 }
             });
+
+
         }
     }
 
     public void HideAndClear()
     {
-        // Limpia todas las tarjetas
         foreach (Transform child in container)
             Destroy(child.gameObject);
 
-        // Oculta el panel
-        if (panel != null) panel.SetActive(false);
+        if (panel != null)
+            panel.SetActive(false);
     }
 }

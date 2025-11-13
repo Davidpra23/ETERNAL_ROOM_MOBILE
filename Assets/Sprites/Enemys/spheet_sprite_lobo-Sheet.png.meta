@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spheet_sprite_lobo-Sheet_0: 2350073761425398620
+      spheet_sprite_lobo-Sheet_1: 7130021646934313247
+      spheet_sprite_lobo-Sheet_10: -831706540701564048
+      spheet_sprite_lobo-Sheet_11: -5672579296094567131
+      spheet_sprite_lobo-Sheet_12: 3662230952795929351
+      spheet_sprite_lobo-Sheet_2: -9104353570341607458
+      spheet_sprite_lobo-Sheet_3: -2900410292664754891
+      spheet_sprite_lobo-Sheet_4: -7478374064513193209
+      spheet_sprite_lobo-Sheet_5: 2958845506720289102
+      spheet_sprite_lobo-Sheet_6: 2557055753682734171
+      spheet_sprite_lobo-Sheet_7: 7133104647234704817
+      spheet_sprite_lobo-Sheet_8: -9053118342191100695
+      spheet_sprite_lobo-Sheet_9: 4060406712698282566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

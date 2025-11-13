@@ -13,11 +13,15 @@ public class ArrowProjectile : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private Vector2 dir;
     [SerializeField] private float speed;
-    [SerializeField] private float lifeTime = 3f; // ⏳
+    [SerializeField] private float lifeTime = 3f;
     [SerializeField] private LayerMask enemyLayer;
 
     [Header("FX")]
     [SerializeField] private GameObject hitVFX;
+
+    // Chain Lightning
+    [SerializeField] private bool chainLightningEnabled = false;
+    [SerializeField] private ChainLightningHandler chainLightningPrefab;
 
     private Rigidbody2D rb;
     private DestroyReason reason = DestroyReason.None;
@@ -37,13 +41,16 @@ public class ArrowProjectile : MonoBehaviour
         if (myCollider == null) Debug.LogWarning("[Arrow] Falta Collider2D (usa IsTrigger).");
     }
 
-    public void Init(int damage, Vector2 direction, float speed, float lifeTime, LayerMask enemyLayer, Collider2D[] ignoreThese = null)
+    public void Init(int damage, Vector2 direction, float speed, float lifeTime, LayerMask enemyLayer, Collider2D[] ignoreThese = null, bool enableChain = false, ChainLightningHandler chainPrefab = null)
     {
         this.damage = damage;
         this.dir = direction.sqrMagnitude < 0.0001f ? Vector2.right : direction.normalized;
         this.speed = speed;
         this.lifeTime = Mathf.Max(0.1f, lifeTime);
         this.enemyLayer = enemyLayer;
+
+        this.chainLightningEnabled = enableChain;
+        this.chainLightningPrefab = chainPrefab;
 
         transform.right = this.dir;
         transform.position += (Vector3)(this.dir * 0.05f);
@@ -97,6 +104,15 @@ public class ArrowProjectile : MonoBehaviour
             eh.TakeDamage(damage);
             if (hitVFX) Instantiate(hitVFX, transform.position, Quaternion.identity);
             reason = DestroyReason.HitEnemy;
+
+            // ✅ Chain Lightning
+            if (chainLightningEnabled && chainLightningPrefab != null)
+            {
+                ChainLightningHandler chain = Instantiate(chainLightningPrefab, transform.position, Quaternion.identity);
+                chain.StartChain(other.transform, enemyLayer, damage);
+            }
+
+
             Destroy(gameObject);
         }
     }

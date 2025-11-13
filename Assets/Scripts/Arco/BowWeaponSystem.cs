@@ -38,6 +38,10 @@ public class BowWeaponSystem : WeaponSystem
     [SerializeField] private GameObject chargedEffectPrefab;
     [SerializeField] private Vector3 chargedEffectOffset = Vector3.zero;
 
+    [Header("Chain Lightning (Epic)")]
+    [SerializeField] private bool enableChainLightning = true;
+    [SerializeField] private ChainLightningHandler chainLightningHandlerPrefab;
+
     public System.Action OnAimStarted;
     public System.Action OnShoot;
     public System.Action OnChargeCanceled;
@@ -162,6 +166,8 @@ public class BowWeaponSystem : WeaponSystem
             chargeFXInstance.transform.localPosition = chargeEffectOffset;
             chargeFXInstance.transform.localScale = Vector3.one * 0.5f;
         }
+
+        lastShotTime = Time.time;
     }
 
     private void TryShowChargedEffect()
@@ -180,14 +186,7 @@ public class BowWeaponSystem : WeaponSystem
         float elapsed = Time.time - chargeStartTime;
         bool fullyCharged = elapsed >= chargeTimeRequired;
 
-        if (!fullyCharged)
-        {
-            PlayIdleTrigger();
-            CancelChargeInternal();
-            return;
-        }
-
-        FireArrow();
+        FireArrow(fullyCharged);
         EndChargeState();
         lastShotTime = Time.time;
     }
@@ -237,7 +236,7 @@ public class BowWeaponSystem : WeaponSystem
         chargeCompleted = false;
     }
 
-    private void FireArrow()
+    private void FireArrow(bool fullyCharged)
     {
         if (point2 == null || arrowPrefab == null) return;
 
@@ -251,12 +250,19 @@ public class BowWeaponSystem : WeaponSystem
         var proj = arrow.GetComponent<ArrowProjectile>();
         if (proj != null)
         {
+            float speed = EffectiveArrowSpeed();
+            if (!fullyCharged)
+                speed *= 0.5f;
+
             proj.Init(
                 damage: ComputeDamage(),
                 direction: dir.normalized,
-                speed: EffectiveArrowSpeed(),
+                speed: speed,
                 lifeTime: Mathf.Max(0.1f, arrowLifeTime),
-                enemyLayer: enemyLayer
+                enemyLayer: enemyLayer,
+                ignoreThese: null,
+                enableChain: fullyCharged && enableChainLightning,
+                chainPrefab: fullyCharged ? chainLightningHandlerPrefab : null
             );
         }
 

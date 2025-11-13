@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbad27e55ca65c04d97719375d9d7808, type: 3}
   m_Name: IncreaseMaxHealth
   m_EditorClassIdentifier: Assembly-CSharp::IncreaseMaxHealthUpgrade
-  upgradeName: IncreasedMaxHealth
+  upgradeName: Vida maxima
   description: "+3 a la vida m\xE1xima"
   icon: {fileID: 1749601910329954710, guid: 49c250f6ae77d9a4ba484b62e5b3f091, type: 3}
+  rarity: 0
   amount: 3

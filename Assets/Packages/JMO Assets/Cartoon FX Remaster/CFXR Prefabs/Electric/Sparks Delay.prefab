@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7671151407944005623}
   - component: {fileID: 3655547795670086696}
   - component: {fileID: 2834280257835417487}
+  - component: {fileID: 2359637960748376462}
   m_Layer: 0
   m_Name: Sparks Delay
   m_TagString: Untagged
@@ -4928,4 +4929,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc79d0d544fcfdd4593a05f8920ac197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyAfterTime
+  objectToDestroy: {fileID: 0}
   lifetime: 2
+--- !u!210 &2359637960748376462
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862022057106257862}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_SortAtRoot: 0

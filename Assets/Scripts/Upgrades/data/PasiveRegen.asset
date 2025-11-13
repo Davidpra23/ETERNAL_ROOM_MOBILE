@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46177794d57ed0942b0c333f272ae237, type: 3}
   m_Name: PasiveRegen
   m_EditorClassIdentifier: Assembly-CSharp::PassiveRegenUpgrade
-  upgradeName: LifeRegen
+  upgradeName: Regeneracion
   description: "+1 regeneraci\xF3n de vida"
   icon: {fileID: 134873149880636640, guid: 4af8fa874cbae3645a1026936bc9c97e, type: 3}
+  rarity: 0
   healPerTick: 1
   interval: 3

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c5e50ec2bccbe44b15fc80c1ff8644, type: 3}
   m_Name: MoveSpeedB
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBoostUpgrade
-  upgradeName: BoostSpeed
+  upgradeName: Velocidad
   description: "+1 a la velocidad m\xE1xima"
   icon: {fileID: -4012736614915743382, guid: 91f7a5ca34a663f449d95afdc1bd28bf, type: 3}
   rarity: 1

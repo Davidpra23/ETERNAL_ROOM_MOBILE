@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4d73441047b46458dd0466659a124f, type: 3}
+  m_Name: Lanza
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponShopItem
+  itemName: Lanza
+  description: "<color=#1E90FF>Da\xF1o:</color> 14\r\n<color=#1E90FF>Cooldown:</color>
+    1.5s\r\n<color=#1E90FF>Rango:</color> 5"
+  icon: {fileID: -2796400091282023116, guid: 5161c96e3c6cc00408d4163664ab50bb, type: 3}
+  cost: 70
+  rarity: 1
+  weaponPrefab: {fileID: 6178056938708049923, guid: 156c87b1d4360e34ca7db6be690b2f86, type: 3}
+  damageBonus: 0
+  attackSpeedBonus: 0
+  projectilesBonus: 0

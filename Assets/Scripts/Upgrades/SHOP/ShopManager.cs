@@ -7,25 +7,47 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private ShopUI shopUI;
     [SerializeField] private List<ShopItem> allShopItems;
     [SerializeField] private int itemsPerVisit = 3;
-    [SerializeField] private bool closeAfterFirstPurchase = true;
-    [SerializeField] private RarityTable rarityTable; // ASIGNA
+    [SerializeField] private RarityTable rarityTable;
 
     private GameObject player;
+    private readonly HashSet<int> shopWaves = new HashSet<int> { 2, 5, 10, 15, 19 };
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    public bool ShouldShowShopThisWave()
+    {
+        if (WaveManager.Instance == null)
+            return false;
+
+        // ✅ Tienda solo tras estas oleadas completadas
+        int wave = WaveManager.Instance.GetCurrentWave();
+        return wave == 2 || wave == 5 || wave == 10 || wave == 15 || wave == 19;
+    }
+
+
+
+
+
+
     public void ShowShop()
     {
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
-        if (shopUI == null) { Debug.LogError("[ShopManager] Falta ShopUI"); return; }
+        if (shopUI == null)
+        {
+            Debug.LogError("[ShopManager] Falta ShopUI");
+            return;
+        }
+
+        // ✅ Pausar el juego
+        Time.timeScale = 0f;
 
         int wave = WaveManager.Instance != null ? WaveManager.Instance.GetCurrentWave() : 1;
         var weights = rarityTable != null
             ? rarityTable.GetWeights(wave)
-            : new Dictionary<Rarity, float> // fallback simple
+            : new Dictionary<Rarity, float>
             {
                 { Rarity.Common, 0.7f },
                 { Rarity.Rare, 0.2f },
@@ -55,14 +77,13 @@ public class ShopManager : MonoBehaviour
 
         ScoreManager.Instance.AddScore(-item.cost);
 
-        if (closeAfterFirstPurchase)
-        {
-            shopUI.Close();
-        }
+        // ❌ No cerramos la tienda automáticamente (botón lo hace)
     }
 
     private void OnShopClosed()
     {
-        WaveManager.Instance?.PrepareNextWave();
+        // ✅ Reanudar juego al cerrar tienda
+        Time.timeScale = 1f;
+        // No llamamos PrepareNextWave aquí (tu botón lo hace)
     }
 }

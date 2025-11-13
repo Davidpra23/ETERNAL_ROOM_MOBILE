@@ -130,7 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9386edc54c22e346903393b17bb7f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  damageTextPrefab: {fileID: 8606362886504162020, guid: 7670834b57c015749b6c85c3669ba0c6, type: 3}
+  damageTextSpawnPoint: {fileID: 0}
+  maxHealth: 10
   coinReward: 1
   deathEffect: {fileID: 0}
   deathEffectDelay: 0.6
@@ -240,5 +242,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23b788e912f1ae4c9df34f0004eed84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  separationRadius: 0.3
-  separationForce: 30
+  separationRadius: 0.5
+  separationForce: 50

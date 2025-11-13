@@ -6,9 +6,11 @@ public class WeaponAim : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Transform parentTransform; // Se asigna automáticamente si está vacío
+    [SerializeField] private Transform parentTransform;
 
     [Header("Aim Settings")]
+    public bool AimLocked { get; set; } = false;
+
     [SerializeField] private float aimSmoothness = 20f;
     [SerializeField] private float idleSmoothness = 8f;
     [SerializeField] private Vector2 aimOffset = Vector2.zero;
@@ -29,20 +31,63 @@ public class WeaponAim : MonoBehaviour
     private Quaternion targetRotation;
     private List<Transform> enemiesInRange = new();
 
-    void Awake()
+    private void Awake()
     {
+        AutoAssignPlayerReferences();
         AutoAssignParentTransform();
     }
 
-    void Update()
+    private void Update()
     {
         if (!playerTransform) return;
+        if (AimLocked) return;
 
         FindNearestEnemy();
         UpdateAim360();
         ApplyRotation();
     }
 
+    // -------------------------------------------------------
+    // 🔹 AUTO-ASIGNACIÓN DE REFERENCIAS
+    // -------------------------------------------------------
+    private void AutoAssignPlayerReferences()
+    {
+        // Si no está asignado manualmente, busca al jugador por tag
+        if (!playerTransform)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                playerTransform = playerObj.transform;
+        }
+
+        // Buscar PlayerMovement automáticamente
+        if (!playerMovement && playerTransform != null)
+            playerMovement = playerTransform.GetComponent<PlayerMovement>();
+
+        // Si aún no lo encuentra, busca en toda la escena (último recurso)
+        if (!playerMovement)
+            playerMovement = FindObjectOfType<PlayerMovement>();
+    }
+
+    private void AutoAssignParentTransform()
+    {
+        if (parentTransform != null) return;
+
+        Transform t = transform;
+        for (int i = 0; i < 2; i++)
+        {
+            if (t.parent != null)
+                t = t.parent;
+            else
+                return;
+        }
+
+        parentTransform = t;
+    }
+
+    // -------------------------------------------------------
+    // 🔹 DETECCIÓN Y ROTACIÓN
+    // -------------------------------------------------------
     private void FindNearestEnemy()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, enemyLayer);
@@ -50,7 +95,7 @@ public class WeaponAim : MonoBehaviour
         enemiesInRange.Clear();
         foreach (var hit in hits)
         {
-            if (hit && hit.TryGetComponent(out EnemyHealth eh) && !eh.IsDead)
+            if (hit && hit.TryGetComponent<IHealth>(out var health) && !health.IsDead)
                 enemiesInRange.Add(hit.transform);
         }
 
@@ -89,7 +134,6 @@ public class WeaponAim : MonoBehaviour
                 float baseAngle = GetBaseSpriteAngleFromTheta(theta);
                 targetRotation = Quaternion.Euler(0, 0, baseAngle);
             }
-            // Si no se mueve, mantiene targetRotation
         }
     }
 
@@ -99,6 +143,9 @@ public class WeaponAim : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, s * Time.deltaTime);
     }
 
+    // -------------------------------------------------------
+    // 🔹 UTILIDADES DE ÁNGULOS
+    // -------------------------------------------------------
     private static float AngleFromVector360(Vector2 v) =>
         (Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg + 360f) % 360f;
 
@@ -140,24 +187,8 @@ public class WeaponAim : MonoBehaviour
         }
     }
 
-    private void AutoAssignParentTransform()
-    {
-        if (parentTransform != null) return;
-
-        Transform t = transform;
-        for (int i = 0; i < 2; i++)
-        {
-            if (t.parent != null)
-                t = t.parent;
-            else
-                return; // No hay suficientes niveles arriba
-        }
-
-        parentTransform = t;
-    }
-
 #if UNITY_EDITOR
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
