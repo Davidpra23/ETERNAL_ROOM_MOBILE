@@ -118,8 +118,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -134,22 +132,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-    buildTarget: WebGL
-=======
-    buildTarget: Android
->>>>>>> Stashed changes
-=======
-    buildTarget: Android
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -180,8 +162,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a8336c9536490f4bb684cb66029896e
-      internalID: -997269799
+      spriteID: fb60d862f7d10d54c8a8449df2c256bc
+      internalID: -1121731009
       vertices: []
       indices: 
       edges: []
@@ -202,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac90e592b67269549a70847536be4b1f
-      internalID: -69427345
+      spriteID: c9ed1007d741a4741bee1cd6559b29af
+      internalID: 374400297
       vertices: []
       indices: 
       edges: []
@@ -224,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7608e2780a07a2641b7bd89f62d904d0
-      internalID: -1929939792
+      spriteID: 7ed4dbe871730254ea9996e13945b770
+      internalID: 1200928761
       vertices: []
       indices: 
       edges: []
@@ -246,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4714be52c3dc3f4d9d43909c1669bd1
-      internalID: -432749290
+      spriteID: e1259a7f6cdd59441918c0b410a894ea
+      internalID: -1855181028
       vertices: []
       indices: 
       edges: []
@@ -268,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73bda1ec9d5b5f642940e7504b6a521f
-      internalID: -1220802260
+      spriteID: 9f9f25291953bd04baf3dd122b0c44ef
+      internalID: -2005449871
       vertices: []
       indices: 
       edges: []
@@ -290,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a94539f40ae92f347a9475464d67eea0
-      internalID: 1868594397
+      spriteID: dc998deb1995af34299bdc5112e37889
+      internalID: -1878915037
       vertices: []
       indices: 
       edges: []
@@ -312,8 +294,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec84d8dccad35249a0ad7669ef8749f
-      internalID: -947033645
+      spriteID: 91ea3582e5042ae4ab0be8a20f1049b6
+      internalID: 1308475089
       vertices: []
       indices: 
       edges: []
@@ -334,8 +316,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e98fedff394152d47a11e1efd39baf09
-      internalID: -1314452989
+      spriteID: 846797a279b489942b304ee0d2dace67
+      internalID: 2057859232
       vertices: []
       indices: 
       edges: []
@@ -344,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aaf2b16b2ccc3ba4f9ba57d0af751725
+    spriteID: fc1e5c701c95a24458f84cf3caac5b28
     internalID: 0
     vertices: []
     indices: 
@@ -356,14 +338,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Hoguera 64x64_0: -997269799
-      Hoguera 64x64_1: -69427345
-      Hoguera 64x64_2: -1929939792
-      Hoguera 64x64_3: -432749290
-      Hoguera 64x64_4: -1220802260
-      Hoguera 64x64_5: 1868594397
-      Hoguera 64x64_6: -947033645
-      Hoguera 64x64_7: -1314452989
+      Hoguera 64x64_0: -1121731009
+      Hoguera 64x64_1: 374400297
+      Hoguera 64x64_2: 1200928761
+      Hoguera 64x64_3: -1855181028
+      Hoguera 64x64_4: -2005449871
+      Hoguera 64x64_5: -1878915037
+      Hoguera 64x64_6: 1308475089
+      Hoguera 64x64_7: 2057859232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
