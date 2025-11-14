@@ -8,7 +8,16 @@ public class ShopUI : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
     [SerializeField] private Transform container;
-    [SerializeField] private GameObject shopCardPrefab; // tarjeta con: Icon, NameText, DescriptionText, PriceText, BuyButton
+    [SerializeField] private GameObject shopCardPrefab; // tarjeta por defecto (Icon, NameText, DescriptionText, PriceText, BuyButton)
+    [Header("Card Prefabs por Rareza")]
+    [Tooltip("Prefab para items Common. Si está vacío se usará el shopCardPrefab por defecto.")]
+    [SerializeField] private GameObject commonCardPrefab;
+    [Tooltip("Prefab para items Rare. Si está vacío se usará el shopCardPrefab por defecto.")]
+    [SerializeField] private GameObject rareCardPrefab;
+    [Tooltip("Prefab para items Epic. Si está vacío se usará el shopCardPrefab por defecto.")]
+    [SerializeField] private GameObject epicCardPrefab;
+    [Tooltip("Prefab para items Legendary. Si está vacío se usará el shopCardPrefab por defecto.")]
+    [SerializeField] private GameObject legendaryCardPrefab;
     [SerializeField] private Button closeButton; // por si permites cerrar sin comprar
 
     private Action onShopClosed;
@@ -28,23 +37,22 @@ public class ShopUI : MonoBehaviour
         {
             if (item == null) continue;
 
-            var go = GameObject.Instantiate(shopCardPrefab, container);
+            // Elegir prefab según rareza (si se asignó uno específico)
+            GameObject prefabToUse = GetPrefabForRarity(item.rarity) ?? shopCardPrefab;
+            if (prefabToUse == null)
+            {
+                Debug.LogError("[ShopUI] shopCardPrefab o el prefab por rareza no están asignados.");
+                continue;
+            }
+
+            var go = GameObject.Instantiate(prefabToUse, container);
 
             var nameText = go.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
             var descText = go.transform.Find("DescriptionText")?.GetComponent<TextMeshProUGUI>();
             var iconImage = go.transform.Find("Icon")?.GetComponent<Image>();
             var buyButton = go.transform.Find("BuyButton")?.GetComponent<Button>();
-            var rarityFrame = go.transform.Find("RarityFrame")?.GetComponent<Image>();
-
             // 🔹 Nuevo: PriceText ahora es hijo del BuyButton
             var priceText = go.transform.Find("BuyButton/PriceText")?.GetComponent<TextMeshProUGUI>();
-
-            if (rarityFrame != null)
-            {
-                var color = RarityUtil.GetColor(item.rarity);
-                color.a = 1f;
-                rarityFrame.color = color;
-            }
 
             if (!nameText || !descText || !priceText || !iconImage || !buyButton)
             {
@@ -77,6 +85,18 @@ public class ShopUI : MonoBehaviour
             closeButton.onClick.RemoveAllListeners();
             closeButton.onClick.AddListener(Close);
         }
+    }
+
+    private GameObject GetPrefabForRarity(Rarity rarity)
+    {
+        return rarity switch
+        {
+            Rarity.Common => commonCardPrefab != null ? commonCardPrefab : shopCardPrefab,
+            Rarity.Rare => rareCardPrefab != null ? rareCardPrefab : shopCardPrefab,
+            Rarity.Epic => epicCardPrefab != null ? epicCardPrefab : shopCardPrefab,
+            Rarity.Legendary => legendaryCardPrefab != null ? legendaryCardPrefab : shopCardPrefab,
+            _ => shopCardPrefab,
+        };
     }
 
     public void Close()

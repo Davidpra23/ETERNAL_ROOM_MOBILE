@@ -7,7 +7,8 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager Instance { get; private set; }
 
-    [SerializeField] private TMP_Text scoreText; // Usamos TMP_Text en lugar de Text
+    [SerializeField] private TMP_Text scoreText; // Texto principal del score
+    [SerializeField] private TMP_Text shopScoreText; // Texto del score en la tienda
     private int currentScore = 0;
 
     private void Awake()
@@ -31,6 +32,9 @@ public class ScoreManager : MonoBehaviour
     private void UpdateScoreText()
     {
         if (scoreText != null)
-            scoreText.text = $"Puntaje: {currentScore}";
+            scoreText.text = currentScore.ToString();
+        
+        if (shopScoreText != null)
+            shopScoreText.text = currentScore.ToString();
     }
 }

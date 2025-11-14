@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Arco de la Tempestad
   description: "<color=#1E90FF>Da\xF1o de cadena:</color> 4\r\n<color=#1E90FF>Cooldown:</color>
     0.8s\r\n<color=#1E90FF>Rango:</color> 36"
-  icon: {fileID: 2196942282128735896, guid: 72b04031e8b31274aa7adaa97f08791c, type: 3}
+  icon: {fileID: -2063553645421271447, guid: da47dfd93ef09f84b91f7fe655ab30cf, type: 3}
   cost: 5
   rarity: 2
   weaponPrefab: {fileID: 8645549067093824514, guid: 6a80427b6b3e6ef46a528a3a02f5d3f6, type: 3}

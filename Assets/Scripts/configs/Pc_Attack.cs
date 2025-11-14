@@ -17,34 +17,73 @@ public class Pc_Attack : MonoBehaviour
     [SerializeField] private bool cancelOnDisable = true;
 
     private bool holding = false;
+    private bool pressed = false;
+    private float pressStartTime = 0f;
+    [SerializeField, Tooltip("Tiempo mínimo para considerar que es HOLD (seg)")]
+    private float holdThreshold = 0.2f;
 
     private void Update()
     {
-        // --- START HOLD ---
-        if (!holding && (KeyDown() || MouseDown()))
-        {
-            if (EquipmentManager.Instance != null)
-            {
-                EquipmentManager.Instance.StartAttackHold();
-                holding = true;
+        var em = EquipmentManager.Instance;
+        var weapon = em != null ? em.CurrentWeapon : null;
+        var mode = weapon != null ? weapon.Mode : WeaponSystem.AttackInputMode.TapOnly;
 
-                if (showDebug) Debug.Log("[Pc_Attack] Hold START");
-            }
-            else if (showDebug)
+        // --- INPUT DOWN ---
+        if (KeyDown() || MouseDown())
+        {
+            pressStartTime = Time.time;
+            pressed = true;
+
+            if (mode == WeaponSystem.AttackInputMode.TapOnly)
             {
-                Debug.LogWarning("[Pc_Attack] EquipmentManager no encontrado.");
+                // Ataque inmediato por tap
+                if (em != null) em.TriggerAttack();
+                if (showDebug) Debug.Log("[Pc_Attack] TAP attack");
+            }
+            else
+            {
+                // Iniciar hold para modos que lo usan (HoldReleaseOnly / TapAndHoldCharged)
+                if (em != null)
+                {
+                    em.StartAttackHold();
+                    holding = true;
+                    if (showDebug) Debug.Log("[Pc_Attack] Hold START");
+                }
             }
         }
 
-        // --- RELEASE HOLD ---
-        if (holding && (KeyUp() || MouseUp()))
+        // --- INPUT UP ---
+        if (KeyUp() || MouseUp())
         {
-            if (EquipmentManager.Instance != null)
+            float heldTime = Time.time - pressStartTime;
+
+            if (mode == WeaponSystem.AttackInputMode.TapOnly)
             {
-                EquipmentManager.Instance.ReleaseAttackHold();
-                if (showDebug) Debug.Log("[Pc_Attack] Hold RELEASE");
+                // Nada extra en UP para TapOnly
             }
-            holding = false;
+            else if (mode == WeaponSystem.AttackInputMode.HoldReleaseOnly)
+            {
+                // Siempre soltar hold -> el arma decide qué hacer en release
+                if (em != null)
+                {
+                    em.ReleaseAttackHold();
+                    if (showDebug) Debug.Log("[Pc_Attack] Hold RELEASE (HoldOnly)");
+                }
+                holding = false;
+            }
+            else // TapAndHoldCharged
+            {
+                if (em != null)
+                {
+                    // En este modo ya iniciamos hold en DOWN; el release dispara.
+                    // El arma (p.ej., Bow) diferencia carga por tiempo interno.
+                    em.ReleaseAttackHold();
+                    if (showDebug) Debug.Log($"[Pc_Attack] Hold RELEASE (Charged), held={heldTime:0.00}s");
+                }
+                holding = false;
+            }
+
+            pressed = false;
         }
 
         // (Opcional) si quieres permitir cancelar con tecla ESC:

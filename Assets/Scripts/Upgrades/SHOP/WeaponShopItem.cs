@@ -15,7 +15,7 @@ public class WeaponShopItem : ShopItem
     {
         if (player == null) return false;
 
-        Transform socket = player.transform.Find("UniRoot/Weapon");
+        Transform socket = player.transform.Find("Weapon");
         if (socket == null) socket = player.transform; // fallback
 
         // Destruir arma anterior

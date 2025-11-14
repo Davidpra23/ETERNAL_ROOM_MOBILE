@@ -66,6 +66,8 @@ public class WaveManager : MonoBehaviour
     private PlayerHealth playerHealth;
     // Guardar color original del timerText para restaurarlo después del countdown
     private Color originalTimerColor = Color.white;
+    // Para detectar cambios de segundo y aplicar efectos sólo una vez
+    private int lastTimerSeconds = -1;
 
     private void Awake()
     {
@@ -187,8 +189,7 @@ public class WaveManager : MonoBehaviour
         // Pequeña pausa antes de iniciar la oleada
         yield return new WaitForSecondsRealtime(1f);
 
-        // Restaurar color original y iniciar la oleada
-        timerText.color = originalTimerColor;
+        // Iniciar la oleada manteniendo el color amarillo hasta que empiece a contar
         StartNextWave();
     }
 
@@ -330,6 +331,7 @@ public class WaveManager : MonoBehaviour
         yield return StartCoroutine(AnimateWaveText());
 
         waveTimer = waveDuration;
+        lastTimerSeconds = -1; // Reset para nuevo ciclo de efectos
         UpdateWaveUI();
         StartCoroutine(StartWaveRoutine());
     }
@@ -455,7 +457,35 @@ public class WaveManager : MonoBehaviour
         if (waveTimer > 0)
         {
             waveTimer -= Time.deltaTime;
-            timerText.text = string.Format(timerTextFormat, Mathf.CeilToInt(waveTimer));
+            int remaining = Mathf.CeilToInt(waveTimer);
+
+            // Mantener formato base
+            timerText.richText = true;
+
+            // Efecto y color en últimos 5 segundos
+            if (remaining <= 5 && remaining > 0)
+            {
+                // Color gradiente de amarillo a rojo
+                float t = (float)(5 - remaining) / 4f;
+                Color numberColor = Color.Lerp(Color.yellow, Color.red, t);
+                string hex = ColorUtility.ToHtmlStringRGB(numberColor);
+                timerText.color = originalTimerColor; // color general del texto
+                timerText.text = $"<color=#{hex}>{remaining}s</color>";
+
+                // Pulso sólo cuando cambia el segundo
+                if (lastTimerSeconds != remaining)
+                {
+                    StartCoroutine(PulseTimerText(countdownPulseScale, countdownPulseDuration));
+                    lastTimerSeconds = remaining;
+                }
+            }
+            else
+            {
+                // Mostrar normal (resetea color si veníamos de la fase amarilla de 'Sobrevive!!!')
+                timerText.color = originalTimerColor;
+                timerText.text = string.Format(timerTextFormat, remaining);
+                lastTimerSeconds = remaining; // actualizar para evitar efecto accidental si vuelve a >5 (poco probable)
+            }
         }
     }
 

@@ -130,8 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 5
   pickupEffectPrefab: {fileID: 8862022057106257862, guid: fc202103e9f5c0740bece2671b42d407, type: 3}
+  pickupDelay: 0.5
   attractionRange: 2.5
-  attractionSpeed: 6
+  attractionSpeed: 10
 --- !u!70 &7717147995726242506
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BowWeaponSystem : WeaponSystem
 {
+    public override AttackInputMode Mode => AttackInputMode.TapAndHoldCharged;
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform point1;

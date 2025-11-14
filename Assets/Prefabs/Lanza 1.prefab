@@ -56,7 +56,7 @@ MonoBehaviour:
   idleSmoothness: 8
   aimOffset: {x: 0, y: 0}
   rightAngle: -135
-  leftAngle: 135
+  leftAngle: 0
   upAngle: -44
   downAngle: 135
   detectionRadius: 5
@@ -121,8 +121,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  extendSpeed: 15
-  retractSpeed: 20
+  extendSpeed: 30
+  retractSpeed: 40
   maxRange: 2.5
   baseDamage: 10
   cooldown: 0.7

@@ -6,7 +6,6 @@ public class WeaponAim : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Transform parentTransform;
 
     [Header("Aim Settings")]
     public bool AimLocked { get; set; } = false;
@@ -34,7 +33,6 @@ public class WeaponAim : MonoBehaviour
     private void Awake()
     {
         AutoAssignPlayerReferences();
-        AutoAssignParentTransform();
     }
 
     private void Update()
@@ -67,22 +65,6 @@ public class WeaponAim : MonoBehaviour
         // Si aún no lo encuentra, busca en toda la escena (último recurso)
         if (!playerMovement)
             playerMovement = FindObjectOfType<PlayerMovement>();
-    }
-
-    private void AutoAssignParentTransform()
-    {
-        if (parentTransform != null) return;
-
-        Transform t = transform;
-        for (int i = 0; i < 2; i++)
-        {
-            if (t.parent != null)
-                t = t.parent;
-            else
-                return;
-        }
-
-        parentTransform = t;
     }
 
     // -------------------------------------------------------
@@ -152,18 +134,12 @@ public class WeaponAim : MonoBehaviour
     private static float LerpAngle(float a, float b, float t) =>
         a + Mathf.DeltaAngle(a, b) * Mathf.Clamp01(t);
 
-    private float AdjustUpDown(float angle)
-    {
-        if (!parentTransform) return angle;
-        return Mathf.Approximately(parentTransform.localScale.x, 1f) ? -angle : angle;
-    }
-
     private float GetBaseSpriteAngleFromTheta(float theta)
     {
         float aRight = rightAngle;
         float aLeft = leftAngle;
-        float aUp = AdjustUpDown(upAngle);
-        float aDown = AdjustUpDown(downAngle);
+        float aUp = upAngle;
+        float aDown = downAngle;
 
         if (theta < 90f)
         {

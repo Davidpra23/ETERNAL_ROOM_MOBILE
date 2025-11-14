@@ -5,9 +5,9 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class SpearWeaponSystem : WeaponSystem
 {
+    public override AttackInputMode Mode => AttackInputMode.HoldReleaseOnly;
     [Header("References")]
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform uniRootTransform;   // hijo del player que se escala
     [SerializeField] private Transform spearTip;           // punta real
     [SerializeField] private LayerMask enemyLayer;
 
@@ -58,13 +58,6 @@ public class SpearWeaponSystem : WeaponSystem
         if (playerTransform && stats == null)
             stats = playerTransform.GetComponent<PlayerCombatStats>();
 
-        if (!uniRootTransform)
-        {
-            Transform maybeUniRoot = playerTransform?.Find("UniRoot");
-            if (maybeUniRoot) uniRootTransform = maybeUniRoot;
-            else Debug.LogWarning("[Spear] No se asignó UniRoot. No podrá detectar flips.");
-        }
-
         if (!spearTip)
             Debug.LogWarning("[Spear] Asigna spearTip (punta de la lanza).");
 
@@ -114,9 +107,6 @@ public class SpearWeaponSystem : WeaponSystem
         Transform tip = spearTip ? spearTip : transform;
         Vector3 dirWorld = (useAxisX ? tip.right : tip.up).normalized;
 
-        if (uniRootTransform && uniRootTransform.lossyScale.x < 0)
-            dirWorld *= -1f;
-
         // Convertir a dirección local
         lockedDirLocal = transform.parent.InverseTransformDirection(dirWorld).normalized;
 
@@ -130,8 +120,6 @@ public class SpearWeaponSystem : WeaponSystem
             // Recalcular la dirección objetivo cada frame para seguir el aim actual
             Transform tipDyn = spearTip ? spearTip : transform;
             Vector3 dirWorldDyn = (useAxisX ? tipDyn.right : tipDyn.up).normalized;
-            if (uniRootTransform && uniRootTransform.lossyScale.x < 0)
-                dirWorldDyn *= -1f;
             Vector3 lockedDirLocalDyn = transform.parent.InverseTransformDirection(dirWorldDyn).normalized;
             endLocal = startLocal + lockedDirLocalDyn * maxRange;
             float distCurrent = Mathf.Max(0.001f, Vector3.Distance(startLocal, endLocal));
@@ -212,9 +200,6 @@ public class SpearWeaponSystem : WeaponSystem
 
         Transform tip = spearTip ? spearTip : transform;
         Vector3 dir = (useAxisX ? tip.right : tip.up).normalized;
-
-        if (uniRootTransform && uniRootTransform.lossyScale.x < 0)
-            dir *= -1f;
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(tip.position, tip.position + dir * maxRange);

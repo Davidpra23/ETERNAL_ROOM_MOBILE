@@ -6,6 +6,7 @@ using UnityEditor;
 
 public class SwordDamageSystem : WeaponSystem
 {
+    public override AttackInputMode Mode => AttackInputMode.TapOnly;
     [Header("Damage Settings")]
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackCooldown = 0.5f;
