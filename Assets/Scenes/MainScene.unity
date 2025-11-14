@@ -2073,7 +2073,7 @@ MonoBehaviour:
   volumen: 1
   loop: 1
   minDistance: 3
-  maxDistance: 15
+  maxDistance: 12
 --- !u!4 &218938153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2113805794797468630, guid: 8cfd8eb517ae8034597c7e05852bd9c9, type: 3}
