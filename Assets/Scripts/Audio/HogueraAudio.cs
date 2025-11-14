@@ -9,8 +9,8 @@ public class HogueraAudio : MonoBehaviour
     [SerializeField] private bool loop = true;
     
     [Header("CONFIGURACIÓN DISTANCIA 3D")]
-    [SerializeField] private float minDistance = 2f;   // Distancia mínima para volumen máximo
-    [SerializeField] private float maxDistance = 5f;  // Distancia máxima donde se deja de escuchar
+    [SerializeField] private float minDistance = 3f;   // Distancia mínima para volumen máximo
+    [SerializeField] private float maxDistance = 15f;  // Distancia máxima donde se deja de escuchar
 
     private AudioSource audioSource;
     private Transform player;
