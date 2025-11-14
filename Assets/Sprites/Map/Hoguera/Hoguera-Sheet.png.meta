@@ -118,11 +118,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< Updated upstream
-    buildTarget: WebGL
-=======
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Android
->>>>>>> Stashed changes
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -141,20 +150,20 @@ TextureImporter:
       name: Hoguera-Sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 2
-        width: 40
-        height: 62
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7eb309951edf3b620800000000000000
-      internalID: 2788851738584562663
+      spriteID: 7111e13647648a449b86aba366d22c92
+      internalID: 1120389636
       vertices: []
       indices: 
       edges: []
@@ -163,20 +172,20 @@ TextureImporter:
       name: Hoguera-Sheet_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 2
-        width: 38
-        height: 62
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b519c27616d17b930800000000000000
-      internalID: 4158825085079949659
+      spriteID: 004358010575c9e42a4e98ae2ed70e27
+      internalID: -1272208664
       vertices: []
       indices: 
       edges: []
@@ -185,20 +194,20 @@ TextureImporter:
       name: Hoguera-Sheet_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 2
-        width: 37
-        height: 61
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c333a871c3167100800000000000000
-      internalID: 105293362963362752
+      spriteID: 211d31ea2092b474a8f0e061bbecc335
+      internalID: 906034145
       vertices: []
       indices: 
       edges: []
@@ -207,20 +216,20 @@ TextureImporter:
       name: Hoguera-Sheet_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 2
-        width: 41
-        height: 60
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c54a1488283007e0800000000000000
-      internalID: -1801378104282036792
+      spriteID: f3c9abe76a11a0941993a215e476a40d
+      internalID: 393975374
       vertices: []
       indices: 
       edges: []
@@ -229,20 +238,20 @@ TextureImporter:
       name: Hoguera-Sheet_4
       rect:
         serializedVersion: 2
-        x: 270
-        y: 2
-        width: 37
-        height: 60
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 951bb38252dcd68c0800000000000000
-      internalID: -4004318934190018215
+      spriteID: 2bb03dd72b33b8a4b82b6010552a4584
+      internalID: 2010200162
       vertices: []
       indices: 
       edges: []
@@ -251,20 +260,20 @@ TextureImporter:
       name: Hoguera-Sheet_5
       rect:
         serializedVersion: 2
-        x: 332
-        y: 2
-        width: 39
-        height: 62
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 374ce0ded97e029d0800000000000000
-      internalID: -2800984302751398797
+      spriteID: 654f1d768c249be489f2ad456b786c16
+      internalID: -485595400
       vertices: []
       indices: 
       edges: []
@@ -273,20 +282,20 @@ TextureImporter:
       name: Hoguera-Sheet_6
       rect:
         serializedVersion: 2
-        x: 395
-        y: 2
-        width: 40
-        height: 62
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1cff4b83991f228a0800000000000000
-      internalID: -6331232485745819711
+      spriteID: 523ba56f55974454cbdb1ded1ec0e3b8
+      internalID: -1018883623
       vertices: []
       indices: 
       edges: []
@@ -295,20 +304,20 @@ TextureImporter:
       name: Hoguera-Sheet_7
       rect:
         serializedVersion: 2
-        x: 458
-        y: 2
-        width: 41
-        height: 61
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b48bf1cd86eb4490800000000000000
-      internalID: -7760856036323654476
+      spriteID: 827621984772aeb4fae2c9768b1d3c9f
+      internalID: 1984477631
       vertices: []
       indices: 
       edges: []
@@ -317,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7f4294b79ec87bf418f5eff91ef0be5c
     internalID: 0
     vertices: []
     indices: 
@@ -325,16 +334,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Hoguera-Sheet_0: 2788851738584562663
-      Hoguera-Sheet_1: 4158825085079949659
-      Hoguera-Sheet_2: 105293362963362752
-      Hoguera-Sheet_3: -1801378104282036792
-      Hoguera-Sheet_4: -4004318934190018215
-      Hoguera-Sheet_5: -2800984302751398797
-      Hoguera-Sheet_6: -6331232485745819711
-      Hoguera-Sheet_7: -7760856036323654476
+      Hoguera-Sheet_0: 1120389636
+      Hoguera-Sheet_1: -1272208664
+      Hoguera-Sheet_2: 906034145
+      Hoguera-Sheet_3: 393975374
+      Hoguera-Sheet_4: 2010200162
+      Hoguera-Sheet_5: -485595400
+      Hoguera-Sheet_6: -1018883623
+      Hoguera-Sheet_7: 1984477631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
