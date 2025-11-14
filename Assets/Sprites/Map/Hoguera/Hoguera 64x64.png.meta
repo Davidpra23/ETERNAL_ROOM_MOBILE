@@ -118,6 +118,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,6 +133,17 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+    buildTarget: WebGL
+=======
+    buildTarget: Android
+>>>>>>> Stashed changes
+=======
+    buildTarget: Android
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
