@@ -126,6 +126,12 @@ public class SlimeEnemy : MonoBehaviour
                 // ✅ Aplicar daño directamente sin verificar invencibilidad
                 playerHealth.TakeDamage(damage);
                 
+                // 🔥 REPORTAR ATAQUE AL MANAGER
+                if (SlimeAudioManager.Instance != null)
+                {
+                    SlimeAudioManager.Instance.ReportarAtaque();
+                }
+                
                 if (slimeTrailEffect != null)
                     Instantiate(slimeTrailEffect, transform.position, Quaternion.identity);
             }
@@ -147,6 +153,12 @@ public class SlimeEnemy : MonoBehaviour
     private void OnEnemyDeath()
     {
         isDead = true;
+        
+        // 🔥 REPORTAR MUERTE AL MANAGER
+        if (SlimeAudioManager.Instance != null)
+        {
+            SlimeAudioManager.Instance.ReportarMuerte();
+        }
         
         if (rb != null)
         {
