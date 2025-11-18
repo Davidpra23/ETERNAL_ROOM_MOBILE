@@ -84,6 +84,8 @@ public class ShopUI : MonoBehaviour
         {
             closeButton.onClick.RemoveAllListeners();
             closeButton.onClick.AddListener(Close);
+            closeButton.interactable = true; // ✅ Asegurar que esté interactable
+            closeButton.gameObject.SetActive(true); // ✅ Asegurar que esté visible
         }
     }
 

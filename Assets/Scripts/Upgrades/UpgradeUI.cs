@@ -8,7 +8,16 @@ public class UpgradeUI : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
     [SerializeField] private Transform container;
-    [SerializeField] private GameObject upgradeButtonPrefab;
+    
+    [Header("Upgrade Button Prefabs por Rareza")]
+    [Tooltip("Prefab para upgrades Common.")]
+    [SerializeField] private GameObject commonUpgradePrefab;
+    [Tooltip("Prefab para upgrades Rare.")]
+    [SerializeField] private GameObject rareUpgradePrefab;
+    [Tooltip("Prefab para upgrades Epic.")]
+    [SerializeField] private GameObject epicUpgradePrefab;
+    [Tooltip("Prefab para upgrades Legendary.")]
+    [SerializeField] private GameObject legendaryUpgradePrefab;
 
     private Action<Upgrade> onUpgradeSelected;
 
@@ -33,20 +42,20 @@ public class UpgradeUI : MonoBehaviour
         {
             if (upgrade == null) continue;
 
-            GameObject go = Instantiate(upgradeButtonPrefab, container);
+            // Elegir prefab según rareza
+            GameObject prefabToUse = GetPrefabForRarity(upgrade.rarity);
+            if (prefabToUse == null)
+            {
+                Debug.LogError($"[UpgradeUI] No hay prefab asignado para rareza {upgrade.rarity}.");
+                continue;
+            }
+
+            GameObject go = Instantiate(prefabToUse, container);
 
             var nameText = go.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
             var descText = go.transform.Find("DescriptionText")?.GetComponent<TextMeshProUGUI>();
             var iconImage = go.transform.Find("Image")?.GetComponent<Image>();
             var buyButton = go.transform.Find("BuyButton")?.GetComponent<Button>();
-            var rarityFrame = go.transform.Find("RarityFrame")?.GetComponent<Image>();
-
-            if (rarityFrame != null)
-            {
-                var color = RarityUtil.GetColor(upgrade.rarity);
-                color.a = 1f;
-                rarityFrame.color = color;
-            }
 
             if (nameText == null || descText == null || iconImage == null || buyButton == null)
             {
@@ -77,6 +86,7 @@ public class UpgradeUI : MonoBehaviour
                 }
                 else
                 {
+                    // ✅ No hay tienda: iniciar siguiente oleada automáticamente
                     Debug.Log($"[UpgradeUI] No hay tienda en oleada {WaveManager.Instance.GetCurrentWave()}, iniciando siguiente.");
                     WaveManager.Instance?.StartNextWave();
                 }
@@ -84,6 +94,18 @@ public class UpgradeUI : MonoBehaviour
 
 
         }
+    }
+
+    private GameObject GetPrefabForRarity(Rarity rarity)
+    {
+        return rarity switch
+        {
+            Rarity.Common => commonUpgradePrefab,
+            Rarity.Rare => rareUpgradePrefab,
+            Rarity.Epic => epicUpgradePrefab,
+            Rarity.Legendary => legendaryUpgradePrefab,
+            _ => null,
+        };
     }
 
     public void HideAndClear()

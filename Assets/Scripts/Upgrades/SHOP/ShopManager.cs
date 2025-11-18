@@ -84,6 +84,9 @@ public class ShopManager : MonoBehaviour
     {
         // ✅ Reanudar juego al cerrar tienda
         Time.timeScale = 1f;
-        // No llamamos PrepareNextWave aquí (tu botón lo hace)
+        
+        // ✅ Iniciar siguiente oleada automáticamente al cerrar tienda
+        if (WaveManager.Instance != null)
+            WaveManager.Instance.StartNextWave();
     }
 }

@@ -4,6 +4,10 @@ using System.Collections;
 
 public class BossHealth : MonoBehaviour, IHealth
 {
+    [Header("Damage Text Settings")]
+    [SerializeField] private GameObject damageTextPrefab;
+    [SerializeField] private Transform damageTextSpawnPoint;
+
     [Header("Health Settings")]
     public float maxHealth = 1000f;
     public float currentHealth;
@@ -44,6 +48,8 @@ public class BossHealth : MonoBehaviour, IHealth
         if (animator != null)
             animator.SetTrigger("Damaged");
 
+        ShowDamageText(Mathf.RoundToInt(amount));
+
         if (currentHealth <= 0f)
             Die();
     }
@@ -68,5 +74,26 @@ public class BossHealth : MonoBehaviour, IHealth
     void OnDestroy()
     {
         StopAllCoroutines();
+    }
+
+    private void ShowDamageText(int damageAmount)
+    {
+        if (damageTextPrefab == null) return;
+
+        Vector3 spawnPos = damageTextSpawnPoint != null ?
+            damageTextSpawnPoint.position : transform.position + Vector3.up * 1f;
+
+        GameObject go = Instantiate(damageTextPrefab, spawnPos, Quaternion.identity);
+        DamageText dmg = go.GetComponent<DamageText>();
+
+        Color color = Color.white;
+        bool isCritical = false;
+        if (damageAmount > 20)
+        {
+            color = Color.yellow;
+            isCritical = true;
+        }
+
+        dmg.Setup(damageAmount, color, isCritical);
     }
 }

@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9386edc54c22e346903393b17bb7f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  damageTextPrefab: {fileID: 8606362886504162020, guid: 7670834b57c015749b6c85c3669ba0c6, type: 3}
+  damageTextSpawnPoint: {fileID: 0}
   maxHealth: 2
   coinReward: 1
   deathEffect: {fileID: 0}

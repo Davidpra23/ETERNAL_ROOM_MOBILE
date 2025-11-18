@@ -8,24 +8,13 @@ public class MobileAttackButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     [SerializeField] private Image buttonImage;
     [SerializeField] private Color pressedColor = new Color(0.8f, 0.8f, 0.8f, 0.8f);
     [SerializeField] private Color normalColor = new Color(1f, 1f, 1f, 0.8f);
-    
-    [Header("Referencia al SwordDamageSystem")]
-    [SerializeField] private SwordDamageSystem swordDamageSystem;
 
     [Header("Configuración")]
     [SerializeField] private bool showDebug = true;
 
     void Awake()
     {
-        // Buscar SwordDamageSystem automáticamente si no está asignado
-        if (swordDamageSystem == null)
-        {
-            swordDamageSystem = FindObjectOfType<SwordDamageSystem>();
-            if (swordDamageSystem != null && showDebug)
-            {
-                Debug.Log("SwordDamageSystem encontrado para botón móvil");
-            }
-        }
+        // Nada que auto-asignar: se usará EquipmentManager en tiempo de ejecución
     }
 
     void Start()
@@ -40,14 +29,28 @@ public class MobileAttackButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     // Cuando se presiona el botón táctil
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (swordDamageSystem != null)
+        var em = EquipmentManager.Instance;
+        if (em == null)
         {
-            swordDamageSystem.TryAttack();
-            if (showDebug) Debug.Log("Botón móvil presionado - Ataque ejecutado");
+            if (showDebug) Debug.LogWarning("[MobileAttackButton] EquipmentManager.Instance es null");
+        }
+        else if (em.CurrentWeapon == null)
+        {
+            if (showDebug) Debug.LogWarning("[MobileAttackButton] No hay arma equipada");
         }
         else
         {
-            if (showDebug) Debug.LogWarning("SwordDamageSystem no asignado al botón");
+            var mode = em.CurrentWeapon.Mode;
+            if (mode == WeaponSystem.AttackInputMode.TapOnly)
+            {
+                em.TriggerAttack();
+                if (showDebug) Debug.Log("[MobileAttackButton] TAP attack");
+            }
+            else
+            {
+                em.StartAttackHold();
+                if (showDebug) Debug.Log("[MobileAttackButton] Hold START");
+            }
         }
         
         // Cambiar color visual
@@ -58,6 +61,18 @@ public class MobileAttackButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     // Cuando se suelta el botón táctil
     public void OnPointerUp(PointerEventData eventData)
     {
+        var em = EquipmentManager.Instance;
+        if (em != null && em.CurrentWeapon != null)
+        {
+            var mode = em.CurrentWeapon.Mode;
+            if (mode == WeaponSystem.AttackInputMode.HoldReleaseOnly ||
+                mode == WeaponSystem.AttackInputMode.TapAndHoldCharged)
+            {
+                em.ReleaseAttackHold();
+                if (showDebug) Debug.Log("[MobileAttackButton] Hold RELEASE");
+            }
+        }
+
         // Restaurar color visual
         if (buttonImage != null)
             buttonImage.color = normalColor;
@@ -66,10 +81,11 @@ public class MobileAttackButton : MonoBehaviour, IPointerDownHandler, IPointerUp
     // Método público para forzar ataque desde otros scripts
     public void ForceAttack()
     {
-        if (swordDamageSystem != null)
+        var em = EquipmentManager.Instance;
+        if (em != null)
         {
-            swordDamageSystem.TryAttack();
-            if (showDebug) Debug.Log("Ataque forzado desde código");
+            em.TriggerAttack();
+            if (showDebug) Debug.Log("[MobileAttackButton] Ataque forzado");
         }
     }
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4d73441047b46458dd0466659a124f, type: 3}
+  m_Name: EspadaRoja
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponShopItem
+  itemName: "Espada Carmes\xED"
+  description: "<color=#1E90FF>Da\xF1o:</color> 10\n<color=#1E90FF>Cooldown:</color>
+    0.5s\n<color=#1E90FF>Rango:</color> 36"
+  icon: {fileID: -3022563632333732731, guid: e65aa1567bc560b448308e7ee6bf6e13, type: 3}
+  cost: 25
+  rarity: 3
+  weaponPrefab: {fileID: 6625166953022270382, guid: 32262375d2912ae498fc64f88db0866c, type: 3}
+  damageBonus: 0
+  attackSpeedBonus: 0
+  projectilesBonus: 0

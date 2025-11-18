@@ -13,7 +13,7 @@ public class WaveManager : MonoBehaviour
 
     [Header("Configuración General")]
     [SerializeField] private EnemyConfiguration enemyConfiguration;
-    [SerializeField] private int totalWaves = 20;
+    [SerializeField] private int totalWaves = 15; // Limite reducido: boss en wave 15, última tienda wave 14
     [SerializeField] private float waveDuration = 60f;
 
     [Header("Área de Spawn")]
@@ -302,9 +302,8 @@ public class WaveManager : MonoBehaviour
         if (startWaveButton != null)
         {
             startWaveButton.onClick.AddListener(StartNextWave);
-            startWaveButton.interactable = true;
-            startWaveButton.GetComponentInChildren<TextMeshProUGUI>().text = "Empezar oleada 1";
-            startWaveButton.gameObject.SetActive(true);
+            // ❌ No mostrar el botón al inicio, la primera oleada es automática
+            startWaveButton.gameObject.SetActive(false);
         }
         // No escribir texto en timerText aquí; lo controlará la secuencia automática
         if (timerText != null) timerText.text = "";
@@ -361,9 +360,37 @@ public class WaveManager : MonoBehaviour
     {
         OnWaveStarted?.Invoke(currentWave);
 
-        if (currentWave == 20 && bossPrefab != null)
-            SpawnEnemyGroup(bossPrefab, 1);
+        // Oleada del jefe (última oleada): sin límite de tiempo, esperar muerte del jefe
+        if (currentWave == totalWaves && bossPrefab != null)
+        {
+            // Ocultar temporizador en la oleada del jefe
+            if (timerText != null)
+            {
+                timerText.text = "";
+            }
 
+            // Spawnear jefe en el centro del área
+            Vector3 centerPosition = new Vector3(
+                (spawnAreaMin.x + spawnAreaMax.x) * 0.5f,
+                (spawnAreaMin.y + spawnAreaMax.y) * 0.5f,
+                0
+            );
+            
+            GameObject boss = Instantiate(bossPrefab, centerPosition, Quaternion.identity);
+            activeEnemies.Add(boss);
+            totalEnemiesSpawnedThisWave++;
+
+            // Suscribirse a la muerte del jefe
+            BossHealth bh = boss.GetComponent<BossHealth>();
+            if (bh != null) bh.OnDeath += () => RegisterEnemyDeath(boss);
+            
+            // Esperar hasta que todos los enemigos activos (incluyendo el jefe) estén muertos
+            yield return new WaitUntil(() => activeEnemies.Count == 0);
+            CompleteWave();
+            yield break;
+        }
+
+        // Oleadas normales: spawn loop y límite de tiempo
         yield return StartCoroutine(EnemySpawnLoop());
         yield return new WaitUntil(() => waveTimer <= 0);
         CompleteWave();
@@ -416,8 +443,13 @@ public class WaveManager : MonoBehaviour
             activeEnemies.Add(enemy);
             totalEnemiesSpawnedThisWave++;
 
+            // Suscribirse a la muerte del enemigo normal
             EnemyHealth eh = enemy.GetComponent<EnemyHealth>();
             if (eh != null) eh.OnDeath += () => RegisterEnemyDeath(enemy);
+            
+            // También suscribirse si es un jefe (BossHealth)
+            BossHealth bh = enemy.GetComponent<BossHealth>();
+            if (bh != null) bh.OnDeath += () => RegisterEnemyDeath(enemy);
         }
     }
 
@@ -453,6 +485,9 @@ public class WaveManager : MonoBehaviour
     private void UpdateWaveTimer()
     {
         if (timerText == null) return;
+
+        // No actualizar timer en la oleada del jefe (ya está oculto)
+        if (currentWave == totalWaves) return;
 
         if (waveTimer > 0)
         {
@@ -528,8 +563,16 @@ public class WaveManager : MonoBehaviour
 
     public void PrepareNextWave()
     {
-        // ❌ Ya no mostramos texto "prepárate"
-        StartNextWave(); // arranca la siguiente oleada automáticamente
+        // ✅ Mostrar botón para que el usuario inicie manualmente la siguiente oleada (solo después de tienda)
+        if (startWaveButton != null)
+        {
+            int nextWave = currentWave + 1;
+            var buttonText = startWaveButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
+                buttonText.text = $"Empezar oleada {nextWave}";
+            startWaveButton.interactable = true;
+            startWaveButton.gameObject.SetActive(true);
+        }
     }
 
     private void UpdateWaveUI()

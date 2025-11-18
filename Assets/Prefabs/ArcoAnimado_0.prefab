@@ -191,12 +191,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponAim
   playerTransform: {fileID: 0}
   playerMovement: {fileID: 0}
-  parentTransform: {fileID: 0}
   aimSmoothness: 20
   idleSmoothness: 8
   aimOffset: {x: 0, y: 0}
   rightAngle: 180
-  leftAngle: 180
+  leftAngle: 0
   upAngle: -90
   downAngle: 90
   detectionRadius: 5

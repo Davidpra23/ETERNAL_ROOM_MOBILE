@@ -86,6 +86,16 @@ public class BossController : MonoBehaviour
         if (bossHealth == null)
             bossHealth = GetComponent<BossHealth>();
 
+        // Auto-asignar referencia al jugador
+        if (player == null)
+        {
+            var playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                player = playerObj.transform;
+            else
+                Debug.LogWarning("[BossController] No se encontró jugador con tag 'Player'");
+        }
+
         // Suscribirse a eventos de salud
         if (bossHealth != null)
         {

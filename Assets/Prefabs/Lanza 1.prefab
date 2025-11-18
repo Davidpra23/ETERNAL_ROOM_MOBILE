@@ -51,12 +51,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponAim
   playerTransform: {fileID: 0}
   playerMovement: {fileID: 0}
-  parentTransform: {fileID: 0}
   aimSmoothness: 20
   idleSmoothness: 8
   aimOffset: {x: 0, y: 0}
   rightAngle: -135
-  leftAngle: 0
+  leftAngle: 44
   upAngle: -44
   downAngle: 135
   detectionRadius: 5
@@ -116,7 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearWeaponSystem
   playerTransform: {fileID: 0}
-  uniRootTransform: {fileID: 0}
   spearTip: {fileID: 5332590741811689088}
   enemyLayer:
     serializedVersion: 2

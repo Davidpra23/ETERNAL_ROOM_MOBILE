@@ -31,6 +31,10 @@ public class FadeController : MonoBehaviour
 
     public void FadeOut()
     {
+        // Si el alpha ya está en 0, forzarlo a 1 para garantizar la animación
+        if (canvasGroup.alpha == 0)
+            canvasGroup.alpha = 1;
+        
         StartCoroutine(Fade(0));
     }
 
